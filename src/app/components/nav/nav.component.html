@@ -1,0 +1,38 @@
+<div class="nav-container">
+
+  <div class="nav">
+    <a
+      [ngClass]="(page === '/#page-intro') ? 'nav__page selected' : 'nav__page'"
+      href="#page-intro"
+    >
+      Intro
+    </a>
+
+    <div class="nav__divider"></div>
+
+    <a
+      [ngClass]="(page === '/#page-about') ? 'nav__page selected' : 'nav__page'"
+      href="#page-about"
+    >
+      About
+    </a>
+
+    <div class="nav__divider"></div>
+
+    <a
+      [ngClass]="(page === '/#page-projects') ? 'nav__page selected' : 'nav__page'"
+      href="#page-projects"
+    >
+      Projects
+    </a>
+
+    <div class="nav__divider"></div>
+
+    <a
+      [ngClass]="(page === '/#page-contact') ? 'nav__page selected' : 'nav__page'"
+      href="#page-contact"
+    >
+      Contact
+    </a>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+:root {
+  //COLORS----------------------------------------------------------
+
+  //PRIMARY
+  --color-dark: #222325; //BACKGROUND
+  --color-grey: #293347; //BACKGROUND
+  --color-light-grey: #56676e; //BORDERS
+  --color-light: #f2f2f2; //TEXT
+
+  //SECONDARY
+  --color-accent1: #c06839; //BUTTONS, MESH
+  --color-accent2: #34c96a; //MESH
+  --color-accent3: #2431c7; //MESH
+
+  //FONT----------------------------------------------------------
+
+  //STYLES
+  --font-primary: "Roboto", sans-serif;
+  --font-heading: "Chakra Petch", sans-serif;
+
+  //SIZES
+  --font-xlarge: 4rem; //TITLES
+  --font-large: 2.5rem; //HEADERS
+  --font-medium: 2.2rem; //PARAGRAPHS, BUTTONS, LINKS
+  --font-small: 1.56rem; //TEXT
+  --font-xsmall: 1.235rem; //MISC
+}

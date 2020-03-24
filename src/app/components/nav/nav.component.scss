@@ -1,0 +1,43 @@
+.nav-container {
+  display: grid;
+  align-content: flex-end;
+
+  padding: 2rem;
+}
+
+.nav {
+  display: grid;
+  justify-items: flex-end;
+
+  .selected {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  &__page {
+    opacity: 0.2;
+
+    color: var(--color-light);
+    font-family: var(--font-heading);
+    font-size: var(--font-medium);
+    font-weight: 100;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  &__divider {
+    opacity: 0.2;
+
+    height: 6vh;
+    width: 0.1rem;
+    margin: 0.5rem;
+
+    background-color: var(--color-light);
+  }
+}

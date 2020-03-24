@@ -1,0 +1,145 @@
+.projects-container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: inherit;
+}
+
+.projects {
+  &__full {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 90% 10%;
+    gap: 1.5rem;
+
+    height: 50vh;
+    width: 75vw;
+
+    &--main {
+      display: grid;
+      grid-template-columns: 100%;
+
+      background-color: rgba(black, 0.2);
+      transform: skewX(-2deg);
+
+      font-family: var(--font-heading);
+      font-size: var(--font-xlarge);
+      font-style: italic;
+      font-weight: 100;
+      text-transform: none;
+
+      &-title {
+        grid-row: 1 / -1;
+        align-self: flex-end;
+
+        padding-left: 1rem;
+      }
+
+      &-clip {
+        grid-row: 1 / -1;
+      }
+    }
+
+    &--buttons {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 100%;
+      align-items: center;
+
+      &-stack {
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 4rem);
+        grid-template-rows: 50% 50%;
+        align-items: center;
+        gap: 0.4rem;
+
+        height: 4rem;
+        width: 34rem;
+
+        img {
+          grid-row: 1 / -1;
+
+          height: 4rem;
+          width: 4rem;
+
+          vertical-align: middle;
+        }
+
+        .mongodb {
+          grid-column: 5 / 7;
+          grid-row: 1 / 2;
+          justify-self: center;
+
+          transform: scale(2) translateY(0.1rem);
+        }
+
+        .express {
+          grid-column: 5 / 7;
+          grid-row: 2 / -1;
+          justify-self: center;
+
+          transform: scale(1.4) translate(0.5rem, -0.1rem);
+        }
+      }
+
+      &-access {
+        grid-column: 2 / -1;
+        grid-row: 1 / -1;
+
+        display: grid;
+        grid-template-rows: 100%;
+        justify-self: flex-end;
+        gap: 2rem;
+
+        img {
+          height: 5rem;
+          width: 5rem;
+
+          vertical-align: middle;
+        }
+
+        .github {
+          grid-row: 1 / -1;
+          align-self: flex-end;
+
+          .hover {
+            display: none;
+          }
+
+          &:hover {
+            .hover {
+              display: inline;
+            }
+
+            .no-hover {
+              display: none;
+            }
+          }
+        }
+
+        .dive {
+          grid-row: 1 / -1;
+          align-self: flex-end;
+
+          justify-self: flex-end;
+          align-self: center;
+
+          padding: 1rem 2rem;
+
+          background-color: rgba(black, 0.2);
+          transform: skewX(-2deg);
+
+          font-family: var(--font-heading);
+          font-size: var(--font-large);
+          font-weight: 100;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

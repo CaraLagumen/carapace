@@ -1,0 +1,165 @@
+.header-container {
+  display: grid;
+  grid-template-columns: 15vw 1fr 10vw;
+  align-content: center;
+  align-items: center;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header {
+  &__carapace {
+    grid-column: 1 / 2;
+
+    padding-top: 1rem;
+
+    &--svg {
+      height: 4vh;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__links {
+    grid-column: 2 / 3;
+    justify-self: center;
+    justify-items: center;
+
+    &--list {
+      display: flex;
+      gap: 2rem;
+
+      img {
+        height: 3.3rem;
+        width: 3.3rem;
+
+        vertical-align: middle;
+      }
+
+      //TOGGLE SVGS BETWEEN HOVERS
+      &-youtube {
+        .hover1 {
+          display: none;
+        }
+
+        &:hover {
+          .hover1 {
+            display: inline;
+          }
+
+          .no-hover1 {
+            display: none;
+          }
+        }
+      }
+
+      &-resume {
+        .hover2 {
+          display: none;
+        }
+
+        &:hover {
+          .hover2 {
+            display: inline;
+          }
+
+          .no-hover2 {
+            display: none;
+          }
+        }
+      }
+
+      &-linkedin {
+        .hover3 {
+          display: none;
+        }
+
+        &:hover {
+          .hover3 {
+            display: inline;
+          }
+
+          .no-hover3 {
+            display: none;
+          }
+        }
+      }
+
+      &-github {
+        .hover4 {
+          display: none;
+        }
+
+        &:hover {
+          .hover4 {
+            display: inline;
+          }
+
+          .no-hover4 {
+            display: none;
+          }
+        }
+      }
+
+      &-codepen {
+        .hover5 {
+          display: none;
+        }
+
+        &:hover {
+          .hover5 {
+            display: inline;
+          }
+
+          .no-hover5 {
+            display: none;
+          }
+        }
+      }
+
+      &-replit {
+        .hover6 {
+          display: none;
+        }
+
+        &:hover {
+          .hover6 {
+            display: inline;
+          }
+
+          .no-hover6 {
+            display: none;
+          }
+        }
+      }
+
+      &-codewars {
+        transform: scale(1.4);
+
+        .hover7 {
+          display: none;
+        }
+
+        &:hover {
+          .hover7 {
+            display: inline;
+          }
+
+          .no-hover7 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    grid-column: 3 / -1;
+    justify-self: flex-end;
+
+    font-weight: 100;
+  }
+}

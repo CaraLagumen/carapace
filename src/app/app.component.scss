@@ -1,0 +1,27 @@
+app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+
+  height: 6vh;
+  width: 100%;
+  border-bottom: solid 0.1rem var(--color-light-grey);
+
+  background-color: var(--color-dark);
+  box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.09),
+    0 0.4rem 0.2rem rgba(0, 0, 0, 0.09), 0 0.8rem 0.4rem rgba(0, 0, 0, 0.09),
+    0 1.6rem 0.8rem rgba(0, 0, 0, 0.09), 0 3.2rem 1.6rem rgba(0, 0, 0, 0.09);
+}
+
+app-nav {
+  position: fixed;
+  bottom: 1vh;
+  right: 2vw;
+  z-index: 5000;
+}
+
+.main-container {
+  background: linear-gradient(to bottom, var(--color-dark), var(--color-grey))
+    no-repeat;
+}

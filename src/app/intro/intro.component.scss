@@ -1,0 +1,22 @@
+.intro-container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: inherit;
+}
+
+.intro {
+  &__text {
+    padding: 0 1rem;
+
+    background-color: rgba(black, 0.2);
+    transform: skewX(-8deg);
+
+    font-family: var(--font-heading);
+    font-size: var(--font-xlarge);
+    font-weight: 100;
+    text-transform: none;
+  }
+}

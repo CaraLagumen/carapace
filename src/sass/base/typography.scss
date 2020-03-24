@@ -1,0 +1,25 @@
+body {
+  color: var(--color-light);
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+::selection {
+  color: var(--color-light);
+  background-color: var(--color-accent2);
+}
+
+a {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: var(--color-accent1);
+  }
+}
+
+ul {
+  list-style: none;
+}

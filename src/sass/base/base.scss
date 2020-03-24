@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+
+  transition: all 0.2s cubic-bezier(0.71, 0.01, 0.09, 1.51);
+}
+
+html {
+  height: 100vh;
+  width: inherit;
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+}
