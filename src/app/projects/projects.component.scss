@@ -105,7 +105,8 @@
 
         .github {
           grid-row: 1 / -1;
-          align-self: flex-end;
+          align-self: center;
+          justify-self: flex-end;
 
           .hover {
             display: none;
@@ -124,10 +125,8 @@
 
         .dive {
           grid-row: 1 / -1;
-          align-self: flex-end;
-
-          justify-self: flex-end;
           align-self: center;
+          justify-self: flex-end;
 
           padding: 1rem 2rem;
 

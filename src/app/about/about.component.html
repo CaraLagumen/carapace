@@ -6,8 +6,14 @@
       Hello world,
     </div>
 
-    <!-- <div class="about__main--text">
-      <div class="about__main--text-main">
+    <div
+      *ngIf="readMore"
+      class="about__main--text"
+    >
+      <div
+        @flicker
+        class="about__main--text-main"
+      >
         My name is Cara Lagumen. I’m an emerging full stack developer from Henderson, NV - entirely self-taught. Thus
         far, I am proficient in the MEAN stack (MongoDB, Express, Angular, and Node.js.) And although I’m not
         exceptional at design - it is also something I quite enjoy.
@@ -16,16 +22,22 @@
         newborn turtle carried out by the sea, YouTube’s algorithm brought me to the channels of wise coders who taught
         me the only barrier keeping me from coding was myself.
       </div>
-    </div> -->
+    </div>
 
-    <div class="about__main--text">
+    <div
+      *ngIf="!readMore"
+      class="about__main--text"
+    >
       <div class="about__main--text-main">
         My name is Cara Lagumen. I’m an emerging full stack developer from Henderson, NV - entirely self-taught. Thus
         far, I am proficient in the MEAN stack (MongoDB, Express, Angular, and Node.js.) And although I’m not
         exceptional at design - it is also something I quite enjoy.
       </div>
 
-      <div class="about__main--text-more">
+      <div
+        (click)="onReadMore()"
+        class="about__main--text-more"
+      >
         Read more
         <br><span>▼</span>
       </div>
