@@ -14,7 +14,7 @@ export class IntroComponent implements OnInit {
   introTextArr: string[] = [
     "Unhandled exception at life, degree is undefined.",
     "const userCara = require(‘constantProduction’);",
-    "git commit -m “Update codingJourney.ts”",
+    "git commit -m “Updated coding-journey.ts”",
     "RangeError: Potential learning infinite loop."
   ];
 

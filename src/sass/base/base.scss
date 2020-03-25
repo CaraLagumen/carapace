@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: inherit;
 
-  transition: all 0.2s cubic-bezier(0.71, 0.01, 0.09, 1.51);
+  transition: all 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
 }
 
 html {
@@ -14,4 +14,6 @@ html {
   box-sizing: border-box;
 
   font-size: 62.5%;
+
+  scroll-behavior: smooth;
 }

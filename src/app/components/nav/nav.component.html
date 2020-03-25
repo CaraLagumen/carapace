@@ -1,6 +1,14 @@
 <div class="nav-container">
 
   <div class="nav">
+
+    <div class="diamond-container">
+      <span
+        class="diamond"
+        [ngStyle]="diamondPosition"
+      ></span>
+    </div>
+
     <a
       [ngClass]="(page === '/#page-intro') ? 'nav__page selected' : 'nav__page'"
       href="#page-intro"
@@ -34,6 +42,7 @@
     >
       Contact
     </a>
+
   </div>
-  
+
 </div>

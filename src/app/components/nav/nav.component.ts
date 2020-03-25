@@ -7,6 +7,7 @@ import { Component, OnInit, HostListener } from "@angular/core";
 })
 export class NavComponent implements OnInit {
   page: string;
+  scrollY: number;
 
   constructor() {}
 
@@ -25,5 +26,11 @@ export class NavComponent implements OnInit {
     } else if (window.pageYOffset < window.innerHeight * 3.5) {
       this.page = "/#page-contact";
     }
+
+    this.scrollY = window.pageYOffset / 10.5; //CONTROL WITH .diamond-container
+  }
+
+  get diamondPosition() {
+    return { "top.px": this.scrollY };
   }
 }

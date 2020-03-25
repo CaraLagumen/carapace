@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
   igniteSize: number;
   igniteX: number;
 
-  isIgniteVisible: boolean = false;
+  isIgnite: boolean = false;
 
   constructor(public el: ElementRef<HTMLElement>) {}
 
@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
 
   get igniteStyle() {
     //HIDE IGNITE BY SETTING SIZE TO ZERO IF NOT VISIBLE
-    const igniteSize = this.isIgniteVisible ? this.igniteSize : 0;
+    const igniteSize = this.isIgnite ? this.igniteSize : 0;
 
     return {
       "height.rem": igniteSize / 10,

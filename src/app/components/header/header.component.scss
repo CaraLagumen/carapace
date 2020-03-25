@@ -12,22 +12,23 @@
     width: 100%;
 
     overflow: hidden;
-  }
 
-  .ignite {
-    position: absolute;
-    top: 5rem; //KEEPS Y STATIC
-    transform: translate(-50%, -50%);
+    .ignite {
+      position: absolute;
+      top: 5rem; //KEEPS Y STATIC
+      transform: translate(-50%, -50%);
 
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      var(--color-accent1) 0%,
-      rgba(192, 104, 57, 0.8) 10%,
-      rgba(192, 104, 57, 0.2) 60%,
-      rgba(192, 104, 57, 0) 100%
-    );
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        var(--color-accent1) 0%,
+        rgba(192, 104, 57, 0.8) 10%,
+        rgba(192, 104, 57, 0.2) 60%,
+        rgba(192, 104, 57, 0) 100%
+      );
 
-    transition: width 0.2s ease, height 0.2s ease;
+      transition: width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52),
+        height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52);
+    }
   }
 }
 
