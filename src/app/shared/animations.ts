@@ -18,7 +18,7 @@ export const flicker = trigger("flicker", [
         }),
         style({ transform: "translate(0, 0.2rem)", opacity: 0.6, offset: 0.2 }),
         style({
-          transform: "translate(0.5rem, 0), skewX(6deg)",
+          transform: "translate(0.5rem, 0) skewX(6deg)",
           opacity: 0.9,
           offset: 0.5
         }),

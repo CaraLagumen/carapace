@@ -1,6 +1,17 @@
 <div class="header-container">
 
-  <div class="header__carapace">
+  <div class="ignite-container">
+    <span
+      class="ignite"
+      [ngStyle]="igniteStyle"
+    ></span>
+  </div>
+
+  <div
+    (mouseenter)="isIgniteVisible = true"
+    (mouseleave)="isIgniteVisible = false"
+    class="header__carapace"
+  >
     <a
       routerLink="/"
       class="header__carapace--link"
@@ -16,7 +27,11 @@
   <div class="header__links">
     <ul class="header__links--list">
 
-      <li class="header__links--list-youtube">
+      <li
+        (mouseenter)="isIgniteVisible = true"
+        (mouseleave)="isIgniteVisible = false"
+        class="header__links--list-youtube"
+      >
         <a href="#">
           <img
             src="assets/youtube-white.svg"
@@ -31,7 +46,11 @@
         </a>
       </li>
 
-      <li class="header__links--list-resume">
+      <li
+        (mouseenter)="isIgniteVisible = true"
+        (mouseleave)="isIgniteVisible = false"
+        class="header__links--list-resume"
+      >
         <a href="#">
           <img
             src="assets/resume-white.svg"
@@ -46,7 +65,11 @@
         </a>
       </li>
 
-      <li class="header__links--list-linkedin">
+      <li
+        (mouseenter)="isIgniteVisible = true"
+        (mouseleave)="isIgniteVisible = false"
+        class="header__links--list-linkedin"
+      >
         <a href="#">
           <img
             src="assets/linkedin-white.svg"
@@ -61,7 +84,11 @@
         </a>
       </li>
 
-      <li class="header__links--list-github">
+      <li
+        (mouseenter)="isIgniteVisible = true"
+        (mouseleave)="isIgniteVisible = false"
+        class="header__links--list-github"
+      >
         <a href="#">
           <img
             src="assets/github-white.svg"
@@ -76,7 +103,11 @@
         </a>
       </li>
 
-      <li class="header__links--list-codepen">
+      <li
+        (mouseenter)="isIgniteVisible = true"
+        (mouseleave)="isIgniteVisible = false"
+        class="header__links--list-codepen"
+      >
         <a href="#">
           <img
             src="assets/codepen-white.svg"
@@ -91,7 +122,11 @@
         </a>
       </li>
 
-      <li class="header__links--list-replit">
+      <li
+        (mouseenter)="isIgniteVisible = true"
+        (mouseleave)="isIgniteVisible = false"
+        class="header__links--list-replit"
+      >
         <a href="#">
           <img
             src="assets/replit-white.svg"
@@ -106,7 +141,11 @@
         </a>
       </li>
 
-      <li class="header__links--list-codewars">
+      <li
+        (mouseenter)="isIgniteVisible = true"
+        (mouseleave)="isIgniteVisible = false"
+        class="header__links--list-codewars"
+      >
         <a href="#">
           <img
             src="assets/4kyu-white.svg"
@@ -124,6 +163,10 @@
     </ul>
   </div>
 
-  <div class="header__copyright">© By Cara Lagumen</div>
+  <div
+    (mouseenter)="isIgniteVisible = true"
+    (mouseleave)="isIgniteVisible = false"
+    class="header__copyright"
+  >© By Cara Lagumen</div>
 
 </div>

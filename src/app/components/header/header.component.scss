@@ -4,21 +4,51 @@
   align-content: center;
   align-items: center;
 
-  padding-left: 1rem;
-  padding-right: 1rem;
+  //KEEPS IGNITE INSIDE CONTAINER
+  .ignite-container {
+    position: fixed;
+
+    height: 6.5vh;
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  .ignite {
+    position: absolute;
+    top: 5rem; //KEEPS Y STATIC
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      var(--color-accent1) 0%,
+      rgba(192, 104, 57, 0.8) 10%,
+      rgba(192, 104, 57, 0.2) 60%,
+      rgba(192, 104, 57, 0) 100%
+    );
+
+    transition: width 0.2s ease, height 0.2s ease;
+  }
 }
 
 .header {
   &__carapace {
     grid-column: 1 / 2;
+    z-index: 5100;
 
     padding-top: 1rem;
+    padding-left: 1rem;
 
     &--svg {
       height: 4vh;
 
+      transition: width 0.2s ease, height 0.2s ease;
+
       &:hover {
         transform: scale(1.05);
+
+        filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
+          drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
       }
     }
   }
@@ -27,6 +57,7 @@
     grid-column: 2 / 3;
     justify-self: center;
     justify-items: center;
+    z-index: 5100;
 
     &--list {
       display: flex;
@@ -37,6 +68,13 @@
         width: 3.3rem;
 
         vertical-align: middle;
+
+        transition: width 0.2s ease, height 0.2s ease;
+
+        &:hover {
+          filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
+            drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
+        }
       }
 
       //TOGGLE SVGS BETWEEN HOVERS
@@ -159,6 +197,9 @@
   &__copyright {
     grid-column: 3 / -1;
     justify-self: flex-end;
+    z-index: 5100;
+
+    padding-right: 1rem;
 
     font-weight: 100;
   }
