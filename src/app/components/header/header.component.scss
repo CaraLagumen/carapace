@@ -63,17 +63,39 @@
       display: flex;
       gap: 2rem;
 
-      img {
-        height: 3.3rem;
+      .link-container {
+        position: relative;
+
         width: 3.3rem;
 
-        vertical-align: middle;
+        img {
+          height: 3.3rem;
+          width: 3.3rem;
 
-        transition: width 0.2s ease, height 0.2s ease;
+          vertical-align: middle;
 
-        &:hover {
-          filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
-            drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
+          transition: width 0.2s ease, height 0.2s ease;
+
+          &:hover {
+            filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
+              drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
+          }
+        }
+
+        .caption {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, 3.5rem);
+
+          padding: 0 0.5rem;
+          padding-bottom: 0.1rem;
+          border-radius: 3.5rem;
+
+          background-color: var(--color-accent1);
+
+          font-weight: bold;
+          text-align: center;
         }
       }
 
@@ -175,7 +197,9 @@
       }
 
       &-codewars {
-        transform: scale(1.4);
+        img {
+          transform: scale(1.4);
+        }
 
         .hover7 {
           display: none;
