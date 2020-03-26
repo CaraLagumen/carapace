@@ -47,6 +47,7 @@
     background-color: rgba(black, 0.2);
     transform: skewX(-2deg);
 
+    color: var(--color-light);
     font-size: var(--font-medium);
     line-height: 1.5rem;
 
@@ -72,8 +73,6 @@
       grid-row: 1 / 2;
 
       transform: translateY(2rem);
-
-      color: var(--color-light);
     }
 
     &--divider {
@@ -106,6 +105,19 @@
       img {
         height: 3.3rem;
         width: 3.3rem;
+
+        transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
+          width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
+
+        &:hover {
+          filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
+            drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
+        }
+
+        &:active {
+          filter: drop-shadow(0 0.4rem 1rem black)
+            drop-shadow(0 0.1rem 3rem black);
+        }
       }
     }
   }

@@ -9,36 +9,41 @@
       Contact
     </div>
 
-    <div class="contact__email ember-btn">
+    <a
+      href="/#page-contact"
+      class="contact__email ember-btn"
+    >
 
       <div class="contact__email--heading">
         Email
       </div>
 
-      <a class="contact__email--link">
+      <div class="contact__email--link">
         CaraLagumen@gmail.com
-      </a>
+      </div>
 
       <span class="contact__email--divider">| </span>
 
-      <a class="contact__email--btn">
-        <a href="#">
-          <img
-            src="assets/copy-white.svg"
-            alt="copy icon"
-            class="no-hover"
-          >
-          <img
-            src="assets/copy.svg"
-            alt="copy icon"
-            class="hover"
-          >
-        </a>
+      <a
+        ngxClipboard
+        [cbContent]="'CaraLagumen@gmail.com'"
+        class="contact__email--btn"
+      >
+        <img
+          src="assets/copy-white.svg"
+          alt="copy icon"
+          class="no-hover"
+        >
+        <img
+          src="assets/copy.svg"
+          alt="copy icon"
+          class="hover"
+        >
       </a>
 
       <span class="ember"></span>
 
-    </div>
+    </a>
 
   </div>
 </div>

@@ -96,13 +96,6 @@
         justify-self: flex-end;
         gap: 2rem;
 
-        img {
-          height: 5rem;
-          width: 5rem;
-
-          vertical-align: middle;
-        }
-
         .github {
           grid-row: 1 / -1;
           align-self: center;
@@ -121,6 +114,24 @@
               display: none;
             }
           }
+
+          img {
+            height: 5rem;
+            width: 5rem;
+
+            transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
+              width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
+
+            &:hover {
+              filter: drop-shadow(0 0.4rem 0.5rem rgba(#c06839, 0.4))
+                drop-shadow(0 0.1rem 1rem rgba(#c06839, 0.4));
+            }
+
+            &:active {
+              filter: drop-shadow(0 0.4rem 1rem rgba(#c06839, 0.4))
+                drop-shadow(0 0.1rem 2rem rgba(#c06839, 0.4));
+            }
+          }
         }
 
         .dive {
@@ -128,7 +139,7 @@
           align-self: center;
           justify-self: flex-end;
 
-          display: grid; //ALLOWS EMBER LAYERED BELOW
+          display: grid;
 
           padding: 1rem 2rem;
 
