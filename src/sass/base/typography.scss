@@ -12,6 +12,8 @@ body {
 }
 
 a {
+  cursor: pointer;
+
   &,
   &:link,
   &:visited {

@@ -3,15 +3,18 @@
   <div class="projects__full">
 
     <div class="projects__full--main">
-      <div class="projects__full--main-title">
-        Baristabook
+      <div
+        [@flicker]="projectTitle"
+        class="projects__full--main-title"
+      >
+        {{ projectTitle }}
       </div>
 
       <div class="projects__full--main-clip"></div>
     </div>
 
-    <div class="projects__full--buttons">
-      <div class="projects__full--buttons-stack">
+    <div class="projects__full--btns">
+      <div class="projects__full--btns-stack">
         <img
           src="assets/html5.svg"
           alt="Html logo"
@@ -48,7 +51,7 @@
         >
       </div>
 
-      <div class="projects__full--buttons-access">
+      <div class="projects__full--btns-access">
         <a
           href="#"
           class="github"
@@ -65,7 +68,10 @@
           >
         </a>
 
-        <div class="dive">Deep dive</div>
+        <a class="dive ember-btn">
+          Deep dive
+          <span class="ember"></span>
+        </a>
 
       </div>
     </div>

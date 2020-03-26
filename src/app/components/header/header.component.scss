@@ -26,8 +26,8 @@
         rgba(192, 104, 57, 0) 100%
       );
 
-      transition: width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52),
-        height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52);
+      transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
+        width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
     }
   }
 }

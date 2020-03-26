@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ElementRef } from "@angular/core";
+import { Component, OnInit, ElementRef, HostListener } from "@angular/core";
 
 @Component({
   selector: "app-header",

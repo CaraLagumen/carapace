@@ -47,6 +47,10 @@
 
         cursor: pointer;
 
+        &:hover {
+          color: var(--color-accent1);
+        }
+
         span {
           position: relative;
           top: -1.5rem;
@@ -56,19 +60,32 @@
       }
     }
 
-    &--button {
+    &--btn {
       justify-self: flex-end;
       align-self: center;
+
+      display: grid; //ALLOWS EMBER LAYERED BELOW
 
       padding: 1rem 2rem;
 
       background-color: rgba(black, 0.2);
       transform: skewX(-2deg);
 
+      color: var(--color-light);
       font-family: var(--font-heading);
       font-size: var(--font-large);
       font-weight: 100;
       text-transform: uppercase;
+
+      overflow: hidden;
+
+      &:hover {
+        transform: skewX(-2deg) translateY(-0.1rem);
+      }
+
+      &:active {
+        transform: skewX(-2deg);
+      }
     }
   }
 }

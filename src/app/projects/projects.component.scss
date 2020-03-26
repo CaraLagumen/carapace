@@ -42,7 +42,7 @@
       }
     }
 
-    &--buttons {
+    &--btns {
       display: grid;
       grid-template-columns: 50% 50%;
       grid-template-rows: 100%;
@@ -128,15 +128,28 @@
           align-self: center;
           justify-self: flex-end;
 
+          display: grid; //ALLOWS EMBER LAYERED BELOW
+
           padding: 1rem 2rem;
 
           background-color: rgba(black, 0.2);
           transform: skewX(-2deg);
 
+          color: var(--color-light);
           font-family: var(--font-heading);
           font-size: var(--font-large);
           font-weight: 100;
           text-transform: uppercase;
+
+          overflow: hidden;
+
+          &:hover {
+            transform: skewX(-2deg) translateY(-0.1rem);
+          }
+
+          &:active {
+            transform: skewX(-2deg);
+          }
         }
       }
     }
