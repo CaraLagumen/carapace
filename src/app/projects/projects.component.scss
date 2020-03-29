@@ -122,15 +122,16 @@
             transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
               width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
 
-            &:hover {
-              filter: drop-shadow(0 0.4rem 0.5rem rgba(#c06839, 0.4))
-                drop-shadow(0 0.1rem 1rem rgba(#c06839, 0.4));
-            }
-
-            &:active {
-              filter: drop-shadow(0 0.4rem 1rem rgba(#c06839, 0.4))
-                drop-shadow(0 0.1rem 2rem rgba(#c06839, 0.4));
-            }
+              &:hover {
+                transform: scale(1.05);
+    
+                filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
+                  drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
+              }
+    
+              &:active {
+                transform: scale(1);
+              }
           }
         }
 

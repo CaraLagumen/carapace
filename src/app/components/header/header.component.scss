@@ -55,9 +55,6 @@
 
       &:active {
         transform: scale(1.04);
-
-        filter: drop-shadow(0 0.4rem 1rem black)
-          drop-shadow(0 0.1rem 3rem black);
       }
     }
   }
@@ -87,13 +84,14 @@
             width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
 
           &:hover {
+            transform: scale(1.05);
+
             filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
               drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
           }
 
           &:active {
-            filter: drop-shadow(0 0.4rem 1rem black)
-              drop-shadow(0 0.1rem 3rem black);
+            transform: scale(1);
           }
         }
 
@@ -214,6 +212,14 @@
       &-codewars {
         img {
           transform: scale(1.4);
+
+          &:hover {
+            transform: scale(1.47) !important;
+          }
+
+          &:active {
+            transform: scale(1.4) !important;
+          }
         }
 
         .hover7 {

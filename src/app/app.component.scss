@@ -21,7 +21,33 @@ app-nav {
   z-index: 5000;
 }
 
+.wave {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1000;
+
+  width: 120%;
+
+  opacity: 0.2;
+
+  &1 {
+    top: 50%;
+  }
+
+  &2 {
+    top: 51%;
+  }
+
+  &3 {
+    top: 49%;
+  }
+}
+
 .main-container {
+  position: relative;
+  z-index: 1000;
+
   background: linear-gradient(to bottom, var(--color-dark), var(--color-grey))
     no-repeat;
 }
