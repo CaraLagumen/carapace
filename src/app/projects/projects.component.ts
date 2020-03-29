@@ -10,6 +10,9 @@ import { flicker } from "../shared/animations";
 })
 export class ProjectsComponent implements OnInit {
   projectTitle: string;
+  projectUrl: string;
+  projectGithub: string;
+  projectStack: string[];
 
   constructor() {}
 
