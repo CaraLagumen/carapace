@@ -7,12 +7,10 @@
     ></span>
   </div>
 
-  <div
-    (mouseenter)="isIgnite = true"
-    (mouseleave)="isIgnite = false"
-    class="header__carapace"
-  >
+  <div class="header__carapace">
     <a
+      (mouseenter)="isIgnite = true"
+      (mouseleave)="isIgnite = false"
       routerLink="/"
       class="header__carapace--link"
     >
@@ -196,7 +194,7 @@
     (mouseleave)="isIgnite = false"
     class="header__copyright"
   >
-    © By Cara Lagumen 
+    © By Cara Lagumen
     <a href="https://twitter.com/CaraLagumen">
       <img
         src="assets/twitter-white.svg"
