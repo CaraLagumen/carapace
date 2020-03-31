@@ -21,7 +21,7 @@
       display: grid;
       grid-template-columns: 100%;
 
-      background-color: rgba(black, 0.2);
+      background-color: rgba(black, 0.5);
       transform: skewX(-2deg);
 
       font-family: var(--font-heading);
@@ -144,7 +144,7 @@
 
           padding: 1rem 2rem;
 
-          background-color: rgba(black, 0.2);
+          background-color: rgba(black, 0.5);
           transform: skewX(-2deg);
 
           color: var(--color-light);

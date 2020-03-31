@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": ["node", "webgl2", "offscreencanvas"]
   },
   "files": [
     "src/main.ts",
