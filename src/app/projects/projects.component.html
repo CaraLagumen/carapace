@@ -1,6 +1,9 @@
 <div class="projects-container">
 
-  <div class="projects__full">
+  <div
+    *ngIf="projects"
+    class="projects__full"
+  >
 
     <div class="projects__full--main">
       <div
@@ -18,36 +21,44 @@
       <div class="projects__full--btns-stack">
 
         <img
+          *ngIf="projects[0].stack.includes('html')"
           src="assets/html5.svg"
           alt="Html logo"
         >
         <img
+          *ngIf="projects[0].stack.includes('css')"
           src="assets/css3.svg"
           alt="Css logo"
         >
         <img
+          *ngIf="projects[0].stack.includes('javascript')"
           src="assets/javascript.svg"
           alt="Javascript logo"
         >
         <img
+          *ngIf="projects[0].stack.includes('sass')"
           src="assets/sass.svg"
           alt="Sass logo"
         >
         <img
+          *ngIf="projects[0].stack.includes('mongodb')"
           src="assets/mongodb.svg"
           alt="Mongodb logo"
           class="mongodb"
         >
         <img
+          *ngIf="projects[0].stack.includes('express')"
           src="assets/express.svg"
           alt="Express logo"
           class="express"
         >
         <img
+          *ngIf="projects[0].stack.includes('angular')"
           src="assets/angular.svg"
           alt="Angular logo"
         >
         <img
+          *ngIf="projects[0].stack.includes('nodejs')"
           src="assets/nodejs.svg"
           alt="Nodejs logo"
         >
@@ -56,7 +67,11 @@
 
       <div class="projects__full--btns-access">
 
-        <a href="{{ projectGithub }}" class="github">
+        <a
+          target="_blank"
+          href="{{ projects[0].urls.github }}"
+          class="github"
+        >
           <img
             src="assets/github.svg"
             alt="GitHub logo"
@@ -69,7 +84,11 @@
           >
         </a>
 
-        <a href="{{ projectUrl }}" class="dive ember-btn">
+        <a
+          target="_blank"
+          href="{{ projects[0].urls.app }}"
+          class="dive ember-btn"
+        >
           Deep dive
           <span class="ember"></span>
         </a>

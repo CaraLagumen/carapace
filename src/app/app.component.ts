@@ -23,9 +23,9 @@ export class AppComponent implements AfterViewInit {
   material: any;
   object: any;
   objects: any[] = [];
+  increment: number = window.pageYOffset;
 
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  increment: number = window.pageYOffset;
 
   constructor() {
     //SCENE & CAMERA
@@ -34,7 +34,6 @@ export class AppComponent implements AfterViewInit {
       70,
       window.innerWidth / window.innerHeight
     );
-    this.camera.position.y = 0.25;
     this.camera.position.z = 5;
     this.camera.rotation.z = 3;
     this.scene.add(this.camera);
@@ -63,7 +62,7 @@ export class AppComponent implements AfterViewInit {
     });
 
     //SET INITIAL OBJECT POSITIONS
-    for (let i = 0; i < 400; i++) {
+    for (let i = 0; i < 500; i++) {
       this.object = new THREE.Mesh(this.geometry, this.material);
 
       this.object.position.x = (Math.random() - 0.5) * 18;
@@ -98,11 +97,11 @@ export class AppComponent implements AfterViewInit {
     if (window.pageYOffset > this.increment) {
       this.camera.position.y -= 0.001;
       this.camera.position.z -= 0.01;
-      this.increment += 10;
+      this.increment += 16;
     } else if (window.pageYOffset < this.increment) {
       this.camera.position.y += 0.001;
       this.camera.position.z += 0.01;
-      this.increment -= 10;
+      this.increment -= 16;
     }
   }
 

@@ -1,6 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Subscription } from "rxjs";
 
 import { flicker } from "../shared/animations";
+import { FirebaseService } from "../shared/firebase.service";
 
 @Component({
   selector: "app-intro",
@@ -8,20 +10,21 @@ import { flicker } from "../shared/animations";
   styleUrls: ["./intro.component.scss"],
   animations: [flicker]
 })
-export class IntroComponent implements OnInit {
+export class IntroComponent implements OnInit, OnDestroy {
+  private firebaseSub: Subscription;
+
   introText: string;
+  introTextArr: string[];
 
-  introTextArr: string[] = [
-    "Unhandled exception at life, degree is undefined.",
-    "const userCara = require(‘constantProduction’);",
-    "git commit -m “Updated coding-journey.ts”",
-    "RangeError: Potential learning infinite loop."
-  ];
-
-  constructor() {}
+  constructor(private firebaseService: FirebaseService) {}
 
   ngOnInit() {
-    this.onLoopIntro();
+    //FETCH THE GOODS
+    this.firebaseSub = this.firebaseService.getIntro().subscribe(intro => {
+      this.introTextArr = intro;
+
+      this.onLoopIntro();
+    });
   }
 
   onShuffleIntro() {
@@ -34,5 +37,9 @@ export class IntroComponent implements OnInit {
     setTimeout(() => {
       this.onLoopIntro();
     }, Math.floor(Math.random() * 8000));
+  }
+
+  ngOnDestroy() {
+    this.firebaseSub.unsubscribe();
   }
 }
