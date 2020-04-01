@@ -13,6 +13,7 @@ import { ContactComponent } from "./contact/contact.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { AlertsComponent } from "./components/alerts/alerts.component";
 import { NavComponent } from "./components/nav/nav.component";
+import { ProjectsNavComponent } from './projects/projects-nav/projects-nav.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavComponent } from "./components/nav/nav.component";
     ContactComponent,
     HeaderComponent,
     AlertsComponent,
-    NavComponent
+    NavComponent,
+    ProjectsNavComponent
   ],
   imports: [
     BrowserModule,

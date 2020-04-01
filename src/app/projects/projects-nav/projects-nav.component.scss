@@ -1,0 +1,48 @@
+.projects-nav-container {
+  height: 15vh;
+  width: 75vw;
+  padding: 1rem;
+
+  .projects-nav-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 1rem;
+
+    font-family: var(--font-heading);
+    font-size: var(--font-medium);
+    font-weight: 100;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    &:hover span {
+      display: none;
+    }
+
+    &:hover:before {
+      content: "< Submerge >";
+
+      font-style: italic;
+    }
+  }
+}
+
+.projects-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-rows: 100%;
+  align-items: space;
+  gap: 1rem;
+
+  height: 100%;
+
+  &__item {
+    grid-row: 1 / -1;
+
+    background-color: rgba(black, 0.2);
+    transform: skewX(-4deg);
+  }
+}
