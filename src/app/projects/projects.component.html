@@ -1,80 +1,89 @@
 <div class="app-projects-nav-container">
-  <app-projects-nav></app-projects-nav>
+  <app-projects-nav
+    [projects]="projects"
+    (getSelectedProject)="onSetSelectedProject($event)"
+  >
+  </app-projects-nav>
 </div>
 
 <div class="projects-container">
 
-
   <div
+    [@flicker]="selectedProject"
     *ngIf="projects"
-    class="projects__full"
+    class="projects"
   >
 
-    <div class="projects__full--main">
+    <div class="projects__main">
       <div
         [@flicker]="projectTitle"
-        class="projects__full--main-title"
+        class="projects__main--title"
       >
         {{ projectTitle }}
       </div>
 
-      <div class="projects__full--main-clip"></div>
+      <div class="projects__main--clip">
+        <img
+          src="{{ selectedProject.img }}"
+          alt="{{ selectedProject.name }} image"
+        >
+      </div>
     </div>
 
-    <div class="projects__full--btns">
+    <div class="projects__btns">
 
-      <div class="projects__full--btns-stack">
+      <div class="projects__btns--stack">
 
         <img
-          *ngIf="projects[0].stack.includes('html')"
+          *ngIf="selectedProject.stack.includes('html')"
           src="assets/html5.svg"
           alt="Html logo"
         >
         <img
-          *ngIf="projects[0].stack.includes('css')"
+          *ngIf="selectedProject.stack.includes('css')"
           src="assets/css3.svg"
           alt="Css logo"
         >
         <img
-          *ngIf="projects[0].stack.includes('javascript')"
+          *ngIf="selectedProject.stack.includes('javascript')"
           src="assets/javascript.svg"
           alt="Javascript logo"
         >
         <img
-          *ngIf="projects[0].stack.includes('sass')"
+          *ngIf="selectedProject.stack.includes('sass')"
           src="assets/sass.svg"
           alt="Sass logo"
         >
         <img
-          *ngIf="projects[0].stack.includes('mongodb')"
+          *ngIf="selectedProject.stack.includes('mongodb')"
           src="assets/mongodb.svg"
           alt="Mongodb logo"
           class="mongodb"
         >
         <img
-          *ngIf="projects[0].stack.includes('express')"
+          *ngIf="selectedProject.stack.includes('express')"
           src="assets/express.svg"
           alt="Express logo"
           class="express"
         >
         <img
-          *ngIf="projects[0].stack.includes('angular')"
+          *ngIf="selectedProject.stack.includes('angular')"
           src="assets/angular.svg"
           alt="Angular logo"
         >
         <img
-          *ngIf="projects[0].stack.includes('nodejs')"
+          *ngIf="selectedProject.stack.includes('nodejs')"
           src="assets/nodejs.svg"
           alt="Nodejs logo"
         >
 
       </div>
 
-      <div class="projects__full--btns-access">
+      <div class="projects__btns--access">
 
         <a
           target="_blank"
-          href="{{ projects[0].urls.github }}"
+          href="{{ selectedProject.urls.github }}"
           class="github"
         >
           <img
@@ -91,7 +100,7 @@
 
         <a
           target="_blank"
-          href="{{ projects[0].urls.app }}"
+          href="{{ selectedProject.urls.app }}"
           class="dive ember-btn"
         >
           Deep dive

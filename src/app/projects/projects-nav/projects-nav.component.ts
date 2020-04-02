@@ -1,6 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 import { flicker } from "src/app/shared/animations";
+import { Project } from "../project.model";
 
 @Component({
   selector: "app-projects-nav",
@@ -9,9 +10,20 @@ import { flicker } from "src/app/shared/animations";
   animations: [flicker]
 })
 export class ProjectsNavComponent implements OnInit {
+  @Input() projects: Project[];
+  @Output() getSelectedProject = new EventEmitter<Project>();
+
   hide: boolean = true;
 
   constructor() {}
 
   ngOnInit() {}
+
+  onToggleProjects() {
+    this.hide = false;
+  }
+
+  onSelectProject(project: Project) {
+    this.getSelectedProject.emit(project);
+  }
 }

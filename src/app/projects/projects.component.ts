@@ -16,6 +16,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   projectTitle: any;
   projects: Project[];
+  selectedProject: Project;
 
   constructor(private firebaseService: FirebaseService) {}
 
@@ -23,7 +24,10 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     //FETCH THE GOODS
     this.firebaseSub = this.firebaseService
       .getProjects()
-      .subscribe(projects => (this.projects = projects));
+      .subscribe(projects => {
+        this.projects = projects;
+        this.selectedProject = projects[0];
+      });
 
     //GITS ANYONE?
     this.onProject2501();
@@ -32,7 +36,11 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   onProject2501() {
     this.projectTitle = "Project 2501";
 
-    setTimeout(() => (this.projectTitle = this.projects[0].name), 5000);
+    setTimeout(() => (this.projectTitle = this.selectedProject.name), 5000);
+  }
+
+  onSetSelectedProject(project) {
+    this.selectedProject = project;
   }
 
   ngOnDestroy() {

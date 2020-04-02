@@ -1,25 +1,50 @@
 <div class="projects-nav-container">
 
+  <span
+    *ngIf="hide === true"
+    class="projects-nav-text"
+  >
+    Explore
+    <br><span>▼</span>
+  </span>
+
   <div
     *ngIf="hide === true"
+    (click)="onToggleProjects()"
     class="projects-nav-btn"
   >
-    <span>
-      <&nbsp;>
+    <span [@flicker]="hide">
+      ■■
+      <br>
+      ■■
     </span>
   </div>
 
   <div
+    @flicker
     *ngIf="hide === false"
     class="projects-nav"
   >
-    <div class="projects-nav__item">projects</div>
 
-    <div class="projects-nav__item">projects</div>
+    <div
+      *ngFor="let project of projects"
+      (click)="onSelectProject(project)"
+      class="projects-nav__item"
+    >
 
-    <div class="projects-nav__item">projects</div>
+      <div class="projects-nav__item--title">
+        {{ project?.name }}
+      </div>
 
-    <div class="projects-nav__item">projects</div>
+      <div class="projects-nav__item--img">
+        <img
+          src="{{ project?.img }}"
+          alt="{{ project?.name }} image"
+        >
+      </div>
+
+    </div>
+
   </div>
 
 </div>

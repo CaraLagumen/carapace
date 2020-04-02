@@ -14,3 +14,17 @@
     box-shadow: 0 0 0 var(--color-light);
   }
 }
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(225deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(405deg);
+  }
+}
