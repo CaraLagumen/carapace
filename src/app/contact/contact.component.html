@@ -1,5 +1,5 @@
-<div class="contact-container">
-  <div class="contact">
+<span class="contact-container">
+  <span class="contact">
 
     <div class="contact__text">
       All things change in a dynamic environment.
@@ -9,8 +9,9 @@
       Contact
     </div>
 
-    <a
-      href="/#page-contact"
+    <div
+      (mouseenter)="onHover()"
+      (mouseleave)="onHover()"
       class="contact__email ember-btn"
     >
 
@@ -18,16 +19,22 @@
         Email
       </div>
 
-      <div class="contact__email--link">
+      <a
+        (click)="onEmailAlert()"
+        target="_top"
+        href="mailto:CaraLagumen@gmail.com"
+        class="contact__email--link"
+      >
         CaraLagumen@gmail.com
-      </div>
+      </a>
 
       <span class="contact__email--divider">| </span>
 
       <a
         ngxClipboard
         [cbContent]="'CaraLagumen@gmail.com'"
-        class="contact__email--btn"
+        (click)="onCopyAlert()"
+        class="contact__email--copy"
       >
         <img
           src="assets/copy-white.svg"
@@ -41,9 +48,12 @@
         >
       </a>
 
-      <span class="ember"></span>
+      <span
+        *ngIf="hover"
+        class="ember-bg"
+      ></span>
 
-    </a>
+    </div>
 
-  </div>
-</div>
+  </span>
+</span>

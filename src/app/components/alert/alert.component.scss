@@ -1,0 +1,50 @@
+.alert-container {
+  position: fixed;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.alert {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+  justify-items: center;
+
+  width: 30rem;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 0.5rem;
+
+  opacity: 0.8;
+  transform: skewX(-8deg);
+
+  color: var(--color-light);
+  font-size: var(--font-xsmall);
+  font-weight: 600;
+  letter-spacing: -0.02rem;
+  line-height: 2.6rem;
+  text-align: center;
+  text-transform: lowercase;
+
+  &__success {
+    background-color: #34c96a;
+  }
+
+  &__info {
+    background-color: #2431c7;
+  }
+
+  &__warning {
+    background-color: #c06839;
+  }
+
+  &__danger {
+    background-color: #56676e;
+  }
+
+  &__close {
+    color: var(--color-light);
+    font-size: var(--font-small);
+  }
+}

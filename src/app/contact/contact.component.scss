@@ -47,7 +47,6 @@
     background-color: rgba(black, 0.5);
     transform: skewX(-2deg);
 
-    color: var(--color-light);
     font-size: var(--font-medium);
     line-height: 1.5rem;
 
@@ -71,8 +70,19 @@
     &--link {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
+      z-index: 5100;
+
+      color: var(--color-light);
 
       transform: translateY(2rem);
+
+      &:hover {
+        transform: translateY(2rem) scale(1.01);
+      }
+
+      &:active {
+        transform: translateY(2rem) scale(1);
+      }
     }
 
     &--divider {
@@ -82,7 +92,7 @@
       opacity: 0.2;
     }
 
-    &--btn {
+    &--copy {
       grid-row: 1 / 2;
       z-index: 5100;
 

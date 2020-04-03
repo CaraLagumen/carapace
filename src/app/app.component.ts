@@ -92,7 +92,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   //LISTEN TO WINDOW FOR SCROLL POSITION TO ALTER CAMERA
-  @HostListener("window:scroll", ["$event"])
+  @HostListener("window:scroll")
   onPageScroll() {
     if (window.pageYOffset > this.increment) {
       this.camera.position.y -= 0.001;

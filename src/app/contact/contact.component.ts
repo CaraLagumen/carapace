@@ -1,12 +1,39 @@
 import { Component, OnInit } from "@angular/core";
 
+import { AlertService } from "../components/alert/alert.service";
+
 @Component({
   selector: "app-contact",
   templateUrl: "./contact.component.html",
   styleUrls: ["./contact.component.scss"]
 })
 export class ContactComponent implements OnInit {
-  constructor() {}
+  hover: boolean;
 
-  ngOnInit() {}
+  constructor(private alertService: AlertService) {}
+
+  ngOnInit() {
+    this.hover = false;
+  }
+
+  onHover() {
+    this.hover = !this.hover;
+  }
+
+  onCopyAlert() {
+    this.alertService.success("Email copied", {
+      autoClose: true,
+      keepAfterRouteChange: true
+    });
+  }
+
+  onEmailAlert() {
+    this.alertService.info(
+      "Your default mail client should've opened, apologies otherwise",
+      {
+        autoClose: true,
+        keepAfterRouteChange: true
+      }
+    );
+  }
 }

@@ -4,6 +4,7 @@ import { Subscription } from "rxjs";
 import { flicker, slideIn } from "../shared/animations";
 import { FirebaseService } from "../shared/firebase.service";
 import { Project } from "./project.model";
+import { AlertService } from "../components/alert/alert.service";
 
 @Component({
   selector: "app-projects",
@@ -20,7 +21,10 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   formattedDescription: string;
   hide: boolean = true;
 
-  constructor(private firebaseService: FirebaseService) {}
+  constructor(
+    private firebaseService: FirebaseService,
+    private alertService: AlertService
+  ) {}
 
   ngOnInit() {
     //FETCH THE GOODS
@@ -42,6 +46,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     setTimeout(() => (this.projectTitle = this.selectedProject.name), 5000);
   }
 
+  //RECEIVE OUTPUT PROJECT FROM CHILD
   onSetSelectedProject(project) {
     this.selectedProject = project;
     this.projectTitle = project.name;
@@ -56,6 +61,16 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   onToggleDescription() {
     this.hide = !this.hide;
+  }
+
+  onStackAlert(technology) {
+    this.alertService.info(
+      `${this.selectedProject.name} was proudly created with ${technology}`,
+      {
+        autoClose: true,
+        keepAfterRouteChange: true
+      }
+    );
   }
 
   ngOnDestroy() {

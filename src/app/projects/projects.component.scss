@@ -46,13 +46,14 @@
     background-color: rgba(black, 0.5);
     border: solid 0.2rem rgba(#2431c7, 0.5);
     transform: skewX(-2deg);
+    opacity: 0.9;
 
     font-family: var(--font-heading);
     font-size: var(--font-xlarge);
     font-style: italic;
     font-weight: 100;
     text-transform: none;
-    cursor: pointer;
+    cursor: help;
 
     &--description {
       position: absolute;
@@ -135,6 +136,8 @@
         width: 4rem;
 
         vertical-align: middle;
+
+        cursor: pointer;
       }
 
       .mongodb {

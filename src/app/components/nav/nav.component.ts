@@ -14,7 +14,7 @@ export class NavComponent implements OnInit {
   ngOnInit() {}
 
   //LISTEN TO WINDOW FOR SCROLL POSITION TO DISPLAY CORRECT PAGE ON NAV
-  @HostListener("window:scroll", ["$event"])
+  @HostListener("window:scroll")
   onPageScroll() {
     //COMPARE Y OFFSET WITH WINDOW HEIGHT TO FIND PAGE
     if (window.pageYOffset < window.innerHeight * 0.5) {

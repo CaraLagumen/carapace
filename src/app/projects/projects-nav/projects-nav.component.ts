@@ -23,6 +23,7 @@ export class ProjectsNavComponent implements OnInit {
     this.hide = !this.hide;
   }
 
+  //OUTPUT SELECTED PROJECT TO PARENT
   onSelectProject(project: Project) {
     this.getSelectedProject.emit(project);
   }

@@ -34,3 +34,21 @@
       inset 0 -0.5rem 1rem rgba(black, 0.1);
   }
 }
+
+.ember-bg {
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+  background-image: radial-gradient(
+    50% 100% at 50% 100%,
+    var(--color-accent1) 0%,
+    rgba(192, 104, 57, 0.161458) 75%,
+    rgba(192, 104, 57, 0) 100%
+  );
+  opacity: 0.5;
+  box-shadow: 0 0.3rem 0.3rem rgba(black, 0.125),
+    0 0.35rem 0.35rem rgba(black, 0.1), 0 0.45rem 0.45rem rgba(black, 0.75),
+    0 0.65rem 0.65rem rgba(black, 0.5), 0 1.1rem 1.1rem rgba(black, 0.025);
+}

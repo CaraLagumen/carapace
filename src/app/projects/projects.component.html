@@ -48,53 +48,63 @@
 
         <img
           *ngIf="selectedProject.stack.includes('html')"
+          (click)="onStackAlert('html')"
           src="assets/html5.svg"
           alt="Html logo"
         >
         <img
           *ngIf="selectedProject.stack.includes('css')"
+          (click)="onStackAlert('css')"
           src="assets/css3.svg"
           alt="Css logo"
         >
         <img
           *ngIf="selectedProject.stack.includes('javascript')"
+          (click)="onStackAlert('javascript')"
           src="assets/javascript.svg"
           alt="Javascript logo"
         >
         <img
           *ngIf="selectedProject.stack.includes('sass')"
+          (click)="onStackAlert('sass')"
           src="assets/sass.svg"
           alt="Sass logo"
         >
         <img
           *ngIf="selectedProject.stack.includes('firebase')"
+          (click)="onStackAlert('firebase')"
           src="assets/firebase.svg"
           alt="Firebase logo"
         >
         <img
           *ngIf="selectedProject.stack.includes('mongodb')"
+          (click)="onStackAlert('mongodb')"
           src="assets/mongodb.svg"
           alt="Mongodb logo"
           class="mongodb"
         >
         <img
           *ngIf="selectedProject.stack.includes('express')"
+          (click)="onStackAlert('express')"
           src="assets/express.svg"
           alt="Express logo"
           class="express"
         >
         <img
           *ngIf="selectedProject.stack.includes('angular')"
+          (click)="onStackAlert('angular')"
           src="assets/angular.svg"
           alt="Angular logo"
         >
         <img
           *ngIf="selectedProject.stack.includes('nodejs')"
+          (click)="onStackAlert('nodejs')"
           src="assets/nodejs.svg"
           alt="Nodejs logo"
         >
         <img
           *ngIf="selectedProject.stack.includes('threejs')"
+          (click)="onStackAlert('threejs')"
           src="assets/threejs.svg"
           alt="Threejs logo"
         >

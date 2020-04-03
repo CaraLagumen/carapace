@@ -9,11 +9,11 @@ import { AppComponent } from "./app.component";
 import { IntroComponent } from "./intro/intro.component";
 import { AboutComponent } from "./about/about.component";
 import { ProjectsComponent } from "./projects/projects.component";
+import { ProjectsNavComponent } from "./projects/projects-nav/projects-nav.component";
 import { ContactComponent } from "./contact/contact.component";
 import { HeaderComponent } from "./components/header/header.component";
-import { AlertsComponent } from "./components/alerts/alerts.component";
 import { NavComponent } from "./components/nav/nav.component";
-import { ProjectsNavComponent } from './projects/projects-nav/projects-nav.component';
+import { AlertComponent } from "./components/alert/alert.component";
 
 @NgModule({
   declarations: [
@@ -21,11 +21,11 @@ import { ProjectsNavComponent } from './projects/projects-nav/projects-nav.compo
     IntroComponent,
     AboutComponent,
     ProjectsComponent,
+    ProjectsNavComponent,
     ContactComponent,
     HeaderComponent,
-    AlertsComponent,
     NavComponent,
-    ProjectsNavComponent
+    AlertComponent
   ],
   imports: [
     BrowserModule,
