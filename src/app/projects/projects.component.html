@@ -14,7 +14,19 @@
     class="projects"
   >
 
-    <div class="projects__main">
+    <div
+      (mouseenter)="onToggleDescription()"
+      (mouseleave)="onToggleDescription()"
+      class="projects__main"
+    >
+      <div
+        @slideIn
+        *ngIf="hide === false"
+        class="projects__main--description"
+      >
+        <span [innerHTML]="formattedDescription"></span>
+      </div>
+
       <div
         [@flicker]="projectTitle"
         class="projects__main--title"
@@ -55,6 +67,11 @@
           alt="Sass logo"
         >
         <img
+          *ngIf="selectedProject.stack.includes('firebase')"
+          src="assets/firebase.svg"
+          alt="Firebase logo"
+        >
+        <img
           *ngIf="selectedProject.stack.includes('mongodb')"
           src="assets/mongodb.svg"
           alt="Mongodb logo"
@@ -75,6 +92,11 @@
           *ngIf="selectedProject.stack.includes('nodejs')"
           src="assets/nodejs.svg"
           alt="Nodejs logo"
+        >
+        <img
+          *ngIf="selectedProject.stack.includes('threejs')"
+          src="assets/threejs.svg"
+          alt="Threejs logo"
         >
 
       </div>

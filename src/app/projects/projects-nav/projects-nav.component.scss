@@ -71,6 +71,7 @@
     display: grid;
 
     background-color: rgba(#34c96a, 0.2);
+    border: solid 0.1rem rgba(#34c96a, 0.2);
     transform: skewX(-4deg);
 
     cursor: pointer;
@@ -108,9 +109,35 @@
       grid-row: 1 / -1;
 
       img {
-        height: 100%;
+        min-height: 100%;
         width: 100%;
       }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: -1.5rem;
+    right: 1rem;
+    z-index: 9999;
+
+    font-size: var(--font-small);
+    font-style: italic;
+    font-weight: 100;
+    letter-spacing: -0.06rem;
+    line-height: 2.6rem;
+    text-transform: lowercase;
+
+    cursor: pointer;
+
+    &:hover {
+      &:hover {
+        color: var(--color-accent1);
+      }
+    }
+
+    &:active {
+      transform: scale(1.02);
     }
   }
 }

@@ -1,9 +1,9 @@
 export interface Project {
   name: string;
   description: string[];
-  stack?: string[];
+  stack: string[];
   urls: { [key: string]: Urls };
-  clip: string;
+  clip?: string;
   img: string;
 }
 

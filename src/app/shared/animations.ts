@@ -27,3 +27,36 @@ export const flicker = trigger("flicker", [
     )
   ])
 ]);
+
+export const slideIn = trigger("slideIn", [
+  transition(":enter", [
+    animate(
+      "200ms ease-in",
+      keyframes([
+        style({
+          width: "0",
+          opacity: 0
+        }),
+        style({
+          width: "50%",
+          opacity: 1
+        })
+      ])
+    )
+  ]),
+  transition(":leave", [
+    animate(
+      "200ms ease-out",
+      keyframes([
+        style({
+          width: "50%",
+          opacity: 1
+        }),
+        style({
+          width: "0",
+          opacity: 0
+        })
+      ])
+    )
+  ])
+]);

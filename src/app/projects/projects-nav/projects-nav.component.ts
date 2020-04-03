@@ -20,7 +20,7 @@ export class ProjectsNavComponent implements OnInit {
   ngOnInit() {}
 
   onToggleProjects() {
-    this.hide = false;
+    this.hide = !this.hide;
   }
 
   onSelectProject(project: Project) {
