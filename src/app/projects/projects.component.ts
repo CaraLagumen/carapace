@@ -10,7 +10,7 @@ import { AlertService } from "../components/alert/alert.service";
   selector: "app-projects",
   templateUrl: "./projects.component.html",
   styleUrls: ["./projects.component.scss"],
-  animations: [flicker, slideIn]
+  animations: [flicker, slideIn],
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
   private firebaseSub: Subscription;
@@ -20,6 +20,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   selectedProject: Project;
   formattedDescription: string;
   hide: boolean = true;
+  url: any;
 
   constructor(
     private firebaseService: FirebaseService,
@@ -30,7 +31,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     //FETCH THE GOODS
     this.firebaseSub = this.firebaseService
       .getProjects()
-      .subscribe(projects => {
+      .subscribe((projects) => {
         this.projects = projects;
         this.selectedProject = projects[0];
         this.onFormatDescription();
@@ -68,7 +69,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       `${this.selectedProject.name} was proudly created with ${technology}`,
       {
         autoClose: true,
-        keepAfterRouteChange: true
+        keepAfterRouteChange: true,
       }
     );
   }
