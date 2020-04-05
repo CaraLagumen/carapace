@@ -16,11 +16,14 @@ html {
   font-size: 62.5%;
 
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
   margin: 0;
   padding: 0;
+
+  scroll-snap-type: mandatory;
 }
 
 canvas {

@@ -38,3 +38,7 @@ app-nav {
   background: linear-gradient(to bottom, var(--color-dark), var(--color-grey))
     no-repeat;
 }
+
+.scrollable {
+  scroll-snap-align: start;
+}

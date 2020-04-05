@@ -108,6 +108,12 @@
           src="assets/threejs.svg"
           alt="Threejs logo"
         >
+        <img
+          *ngIf="selectedProject.stack.includes('cheerio')"
+          (click)="onStackAlert('cheerio')"
+          src="assets/cheerio.svg"
+          alt="Cheerio logo"
+        >
 
       </div>
 

@@ -51,7 +51,7 @@
     font-family: var(--font-heading);
     font-size: var(--font-xlarge);
     font-style: italic;
-    font-weight: 100;
+    font-weight: 500;
     text-transform: none;
     cursor: help;
 
@@ -68,8 +68,7 @@
       font-family: var(--font-primary);
       font-size: var(--font-medium);
       font-style: italic;
-      font-weight: 100;
-      letter-spacing: -0.06rem;
+      font-weight: 300;
       line-height: 2.6rem;
       text-align: right;
 
@@ -222,7 +221,7 @@
         color: var(--color-light);
         font-family: var(--font-heading);
         font-size: var(--font-large);
-        font-weight: 100;
+        font-weight: 500;
         text-transform: uppercase;
 
         overflow: hidden;

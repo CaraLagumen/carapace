@@ -25,7 +25,6 @@
 
       background: transparent;
       transform: rotate(-45deg);
-      opacity: 0.5;
 
       transition: all 0.1s linear;
       animation: pulse 1.5s infinite cubic-bezier(0.7, 0.02, 0.08, 1.52);
@@ -43,7 +42,7 @@
     color: var(--color-light);
     font-family: var(--font-heading);
     font-size: var(--font-medium);
-    font-weight: 100;
+    font-weight: 500;
     text-transform: uppercase;
 
     cursor: pointer;
@@ -55,7 +54,7 @@
   }
 
   &__divider {
-    opacity: 0.05;
+    opacity: 0.4;
 
     height: 6vh;
     width: 0.1rem;
