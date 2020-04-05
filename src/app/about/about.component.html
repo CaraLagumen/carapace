@@ -1,7 +1,8 @@
 <div class="about-container">
 
   <div
-    *ngIf="aboutText"
+    @flicker
+    *ngIf="aboutText && !blog"
     class="about__main"
   >
 
@@ -39,13 +40,53 @@
     </div>
 
     <a
-      target="_blank"
-      href="https://caralagumen.blogspot.com/"
+      (click)="onToggleBlog()"
       class="about__main--btn ember-btn"
     >
       Access logs
       <span class="ember"></span>
     </a>
+
+  </div>
+
+  <div
+    @flicker
+    *ngIf="blog"
+    class="about__blog"
+  >
+
+    <div
+      *ngFor="let post of posts"
+      class="item-container"
+    >
+
+      <div
+        (click)="onToggleBlog()"
+        class="about__blog--close"
+      >
+        ◄ Return
+      </div>
+
+      <div
+        *ngFor="let post of posts"
+        class="about__blog--item"
+      >
+        <div class="about__blog--item-date">
+          {{ post.published | date:'short' }}
+        </div>
+        <div class="about__blog--item-title">
+          {{ post.title }}
+        </div>
+      </div>
+
+    </div>
+
+    <div
+      *ngFor="let post of posts"
+      [innerHTML]="post.content"
+      class="about__blog--content"
+    >
+    </div>
 
   </div>
 

@@ -17,8 +17,9 @@ export class AboutComponent implements OnInit, OnDestroy {
 
   aboutText: string[];
   aboutTextFormatted: string;
+  posts: any[];
   readMore: boolean = false;
-  posts: any;
+  blog: boolean = true;
 
   constructor(
     private firebaseService: FirebaseService,
@@ -35,15 +36,16 @@ export class AboutComponent implements OnInit, OnDestroy {
     });
 
     this.bloggerSub = this.bloggerService.getPosts().subscribe((posts) => {
-      this.posts = posts;
-
-      // console.log(this.posts.items[0].content);
-      console.log(this.posts.items);
+      this.posts = posts.items;
     });
   }
 
   onReadMore() {
     this.readMore = true;
+  }
+
+  onToggleBlog() {
+    this.blog = !this.blog;
   }
 
   ngOnDestroy() {
