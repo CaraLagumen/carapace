@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit, OnDestroy {
   aboutTextFormatted: string;
   posts: any[];
   readMore: boolean = false;
-  blog: boolean = true;
+  blog: boolean = false;
 
   constructor(
     private firebaseService: FirebaseService,
@@ -50,5 +50,6 @@ export class AboutComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.firebaseSub.unsubscribe();
+    this.bloggerSub.unsubscribe();
   }
 }
