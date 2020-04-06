@@ -1,4 +1,4 @@
-.app-projects-nav-container {
+#projects-nav {
   position: relative;
 
   app-projects-nav {
@@ -9,7 +9,7 @@
   }
 }
 
-.projects-container {
+.projects {
   display: grid;
   grid-template-rows: 18% 1fr;
   align-content: flex-start;
@@ -25,213 +25,213 @@
     rgba(#2431c7, 0.2),
     transparent
   );
-}
-
-.projects {
-  grid-row: 2 / -1;
-
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 90% 10%;
-  gap: 2rem;
-
-  height: 50vh;
-  width: 75vw;
 
   &__main {
+    grid-row: 2 / -1;
+
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100%;
+    grid-template-rows: 90% 10%;
+    gap: 2rem;
 
-    background-color: rgba(black, 0.5);
-    border: solid 0.2rem rgba(#2431c7, 0.5);
-    transform: skewX(-2deg);
-    opacity: 0.9;
+    height: 50vh;
+    width: 75vw;
 
-    font-family: var(--font-heading);
-    font-size: var(--font-xlarge);
-    font-style: italic;
-    font-weight: 500;
-    text-transform: none;
-    cursor: help;
+    &--view {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 100%;
 
-    &--description {
-      position: absolute;
-      top: 0;
-      right: 0;
+      background-color: rgba(black, 0.5);
+      border: solid 0.2rem rgba(#2431c7, 0.5);
+      transform: skewX(-2deg);
+      opacity: 0.9;
 
-      height: 100%;
-      width: 50%;
-
-      background-color: rgba(black, 0.8);
-
-      font-family: var(--font-primary);
-      font-size: var(--font-medium);
+      font-family: var(--font-heading);
+      font-size: var(--font-xlarge);
       font-style: italic;
-      font-weight: 300;
-      line-height: 2.6rem;
-      text-align: right;
+      font-weight: 500;
+      text-transform: none;
+      cursor: help;
 
-      overflow: hidden;
-
-      span {
+      &-description {
         position: absolute;
-        top: 50%;
+        top: 0;
         right: 0;
 
-        padding: 2rem 3rem;
+        height: 100%;
+        width: 50%;
 
-        transform: translateY(-50%);
-      }
-    }
+        background-color: rgba(black, 0.8);
 
-    &--title {
-      grid-column: 1 / -1;
-      grid-row: 1 / -1;
-      align-self: flex-end;
-      z-index: 6000;
-
-      padding-left: 1rem;
-
-      text-shadow: 0 0.4rem 0.2rem rgba(black, 0.5);
-    }
-
-    &--clip {
-      grid-column: 1 / -1;
-      grid-row: 1 / -1;
-
-      overflow: hidden;
-
-      font-size: var(--font-xsmall);
-
-      img {
-        min-height: 100%;
-        width: 100%;
-      }
-    }
-  }
-
-  &__btns {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    align-items: center;
-
-    &--stack {
-      grid-column: 1 / 2;
-      grid-row: 1 / -1;
-
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 4rem);
-      grid-template-rows: 50% 50%;
-      align-items: center;
-      gap: 0.4rem;
-
-      height: 4rem;
-      width: 34rem;
-
-      img {
-        grid-row: 1 / -1;
-
-        height: 4rem;
-        width: 4rem;
-
-        vertical-align: middle;
-
-        cursor: pointer;
-      }
-
-      .mongodb {
-        grid-column: 5 / 7;
-        grid-row: 1 / 2;
-        justify-self: center;
-
-        transform: scale(2) translateY(0.1rem);
-      }
-
-      .express {
-        grid-column: 5 / 7;
-        grid-row: 2 / -1;
-        justify-self: center;
-
-        transform: scale(1.4) translate(0.5rem, -0.1rem);
-      }
-    }
-
-    &--access {
-      grid-column: 2 / -1;
-      grid-row: 1 / -1;
-
-      display: grid;
-      grid-template-rows: 100%;
-      justify-self: flex-end;
-      gap: 2rem;
-
-      .github {
-        grid-row: 1 / -1;
-        align-self: center;
-        justify-self: flex-end;
-
-        .hover {
-          display: none;
-        }
-
-        &:hover {
-          .hover {
-            display: inline;
-          }
-
-          .no-hover {
-            display: none;
-          }
-        }
-
-        img {
-          height: 5rem;
-          width: 5rem;
-
-          transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
-            width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
-
-          &:hover {
-            transform: scale(1.05);
-
-            filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
-              drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
-          }
-
-          &:active {
-            transform: scale(1);
-          }
-        }
-      }
-
-      .dive {
-        grid-row: 1 / -1;
-        align-self: center;
-        justify-self: flex-end;
-
-        display: grid;
-
-        padding: 1rem 2rem;
-
-        background-color: rgba(black, 0.5);
-        transform: skewX(-2deg);
-
-        color: var(--color-light);
-        font-family: var(--font-heading);
-        font-size: var(--font-large);
-        font-weight: 500;
-        text-transform: uppercase;
+        font-family: var(--font-primary);
+        font-size: var(--font-medium);
+        font-style: italic;
+        font-weight: 300;
+        line-height: 2.6rem;
+        text-align: right;
 
         overflow: hidden;
 
-        &:hover {
-          transform: skewX(-2deg) translateY(-0.1rem);
+        span {
+          position: absolute;
+          top: 50%;
+          right: 0;
+
+          padding: 2rem 3rem;
+
+          transform: translateY(-50%);
+        }
+      }
+
+      &-title {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        align-self: flex-end;
+        z-index: 6000;
+
+        padding-left: 1rem;
+
+        text-shadow: 0 0.4rem 0.2rem rgba(black, 0.5);
+      }
+
+      &-media {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+
+        overflow: hidden;
+
+        font-size: var(--font-xsmall);
+
+        img {
+          min-height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    &--btns {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 100%;
+      align-items: center;
+
+      &-stack {
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 4rem);
+        grid-template-rows: 50% 50%;
+        align-items: center;
+        gap: 0.4rem;
+
+        height: 4rem;
+        width: 34rem;
+
+        img {
+          grid-row: 1 / -1;
+
+          height: 4rem;
+          width: 4rem;
+
+          vertical-align: middle;
+
+          cursor: pointer;
         }
 
-        &:active {
+        .mongodb {
+          grid-column: 5 / 7;
+          grid-row: 1 / 2;
+          justify-self: center;
+
+          transform: scale(2) translateY(0.1rem);
+        }
+
+        .express {
+          grid-column: 5 / 7;
+          grid-row: 2 / -1;
+          justify-self: center;
+
+          transform: scale(1.4) translate(0.5rem, -0.1rem);
+        }
+      }
+
+      &-access {
+        grid-column: 2 / -1;
+        grid-row: 1 / -1;
+
+        display: grid;
+        grid-template-rows: 100%;
+        justify-self: flex-end;
+        gap: 2rem;
+
+        .github {
+          grid-row: 1 / -1;
+          align-self: center;
+          justify-self: flex-end;
+
+          .hover {
+            display: none;
+          }
+
+          &:hover {
+            .hover {
+              display: inline;
+            }
+
+            .no-hover {
+              display: none;
+            }
+          }
+
+          img {
+            height: 5rem;
+            width: 5rem;
+
+            transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
+              width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
+
+            &:hover {
+              transform: scale(1.05);
+
+              filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
+                drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
+            }
+
+            &:active {
+              transform: scale(1);
+            }
+          }
+        }
+
+        .dive {
+          grid-row: 1 / -1;
+          align-self: center;
+          justify-self: flex-end;
+
+          display: grid;
+
+          padding: 1rem 2rem;
+
+          background-color: rgba(black, 0.5);
           transform: skewX(-2deg);
+
+          color: var(--color-light);
+          font-family: var(--font-heading);
+          font-size: var(--font-large);
+          font-weight: 500;
+          text-transform: uppercase;
+
+          overflow: hidden;
+
+          &:hover {
+            transform: skewX(-2deg) translateY(-0.1rem);
+          }
+
+          &:active {
+            transform: skewX(-2deg);
+          }
         }
       }
     }

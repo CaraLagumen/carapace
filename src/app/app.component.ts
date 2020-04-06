@@ -34,7 +34,7 @@ export class AppComponent implements AfterViewInit {
       70,
       window.innerWidth / window.innerHeight
     );
-    this.camera.position.z = 5;
+    this.camera.position.z = 4;
     this.camera.rotation.z = 3;
     this.scene.add(this.camera);
 
@@ -108,9 +108,9 @@ export class AppComponent implements AfterViewInit {
   render() {
     //ANIMATE EACH OBJECT
     for (let i = 0; i < this.objects.length; i++) {
-      this.objects[i].rotation.x += Math.random() * 0.0005;
-      this.objects[i].rotation.y += Math.random() * 0.0005;
-      this.objects[i].rotation.z += Math.random() * 0.0005;
+      this.objects[i].rotation.x += Math.random() * 0.0001;
+      this.objects[i].rotation.y += Math.random() * 0.0001;
+      this.objects[i].rotation.z += Math.random() * 0.0001;
       this.objects[i].position.x += (Math.random() - 0.5) * 0.0000000000000001;
       this.objects[i].position.z += (Math.random() - 0.5) * 0.0000000000000001;
 

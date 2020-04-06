@@ -1,8 +1,8 @@
-<div class="header-container">
+<div class="header">
 
-  <div class="ignite-container">
+  <div class="header__ignite">
     <span
-      class="ignite"
+      class="header__ignite--effect"
       [ngStyle]="igniteStyle"
     ></span>
   </div>
@@ -28,9 +28,9 @@
       <li
         (mouseenter)="isIgnite = true"
         (mouseleave)="isIgnite = false"
-        class="header__links--list-youtube"
+        id="switch-youtube"
       >
-        <div class="link-container">
+        <div class="header__links--list-item">
           <a
             target="_blank"
             href="https://www.youtube.com/channel/UCMq9sTJuuBKPpSpvCoYB7Cg"
@@ -38,25 +38,25 @@
             <img
               src="assets/youtube-white.svg"
               alt="YouTube logo"
-              class="no-hover1"
+              id="no-hover1"
             >
             <img
               src="assets/youtube.svg"
               alt="YouTube logo"
-              class="hover1"
+              id="hover1"
             >
           </a>
 
-          <span class="caption hover1">YouTube</span>
+          <span id="hover1">YouTube</span>
         </div>
       </li>
 
       <li
         (mouseenter)="isIgnite = true"
         (mouseleave)="isIgnite = false"
-        class="header__links--list-resume"
+        id="switch-resume"
       >
-        <div class="link-container">
+        <div class="header__links--list-item">
           <a
             target="_blank"
             href="#"
@@ -64,25 +64,25 @@
             <img
               src="assets/resume-white.svg"
               alt="Resume logo"
-              class="no-hover2"
+              id="no-hover2"
             >
             <img
               src="assets/resume.svg"
               alt="Resume logo"
-              class="hover2"
+              id="hover2"
             >
           </a>
 
-          <span class="caption hover2">Resume</span>
+          <span id="hover2">Resume</span>
         </div>
       </li>
 
       <li
         (mouseenter)="isIgnite = true"
         (mouseleave)="isIgnite = false"
-        class="header__links--list-linkedin"
+        id="switch-linkedin"
       >
-        <div class="link-container">
+        <div class="header__links--list-item">
           <a
             target="_blank"
             href="#"
@@ -90,25 +90,25 @@
             <img
               src="assets/linkedin-white.svg"
               alt="LinkedIn logo"
-              class="no-hover3"
+              id="no-hover3"
             >
             <img
               src="assets/linkedin.svg"
               alt="LinkedIn logo"
-              class="hover3"
+              id="hover3"
             >
           </a>
 
-          <span class="caption hover3">LinkedIn</span>
+          <span id="hover3">LinkedIn</span>
         </div>
       </li>
 
       <li
         (mouseenter)="isIgnite = true"
         (mouseleave)="isIgnite = false"
-        class="header__links--list-github"
+        id="switch-github"
       >
-        <div class="link-container">
+        <div class="header__links--list-item">
           <a
             target="_blank"
             href="https://github.com/CaraLagumen"
@@ -116,25 +116,25 @@
             <img
               src="assets/github-white.svg"
               alt="GitHub logo"
-              class="no-hover4"
+              id="no-hover4"
             >
             <img
               src="assets/github.svg"
               alt="GitHub logo"
-              class="hover4"
+              id="hover4"
             >
           </a>
 
-          <span class="caption hover4">GitHub</span>
+          <span id="hover4">GitHub</span>
         </div>
       </li>
 
       <li
         (mouseenter)="isIgnite = true"
         (mouseleave)="isIgnite = false"
-        class="header__links--list-codepen"
+        id="switch-codepen"
       >
-        <div class="link-container">
+        <div class="header__links--list-item">
           <a
             target="_blank"
             href="https://codepen.io/CaraLagumen"
@@ -142,25 +142,25 @@
             <img
               src="assets/codepen-white.svg"
               alt="CodePen logo"
-              class="no-hover5"
+              id="no-hover5"
             >
             <img
               src="assets/codepen.svg"
               alt="CodePen logo"
-              class="hover5"
+              id="hover5"
             >
           </a>
 
-          <span class="caption hover5">CodePen</span>
+          <span id="hover5">CodePen</span>
         </div>
       </li>
 
       <li
         (mouseenter)="isIgnite = true"
         (mouseleave)="isIgnite = false"
-        class="header__links--list-replit"
+        id="switch-replit"
       >
-        <div class="link-container">
+        <div class="header__links--list-item">
           <a
             target="_blank"
             href="https://repl.it/@CaraLagumen"
@@ -168,25 +168,25 @@
             <img
               src="assets/replit-white.svg"
               alt="Repl.it logo"
-              class="no-hover6"
+              id="no-hover6"
             >
             <img
               src="assets/replit.svg"
               alt="Repl.it logo"
-              class="hover6"
+              id="hover6"
             >
           </a>
 
-          <span class="caption hover6">Repl.it</span>
+          <span id="hover6">Repl.it</span>
         </div>
       </li>
 
       <li
         (mouseenter)="isIgnite = true"
         (mouseleave)="isIgnite = false"
-        class="header__links--list-codewars"
+        id="switch-codewars"
       >
-        <div class="link-container">
+        <div class="header__links--list-item">
           <a
             target="_blank"
             href="https://www.codewars.com/users/CaraLagumen"
@@ -194,16 +194,16 @@
             <img
               src="assets/4kyu-white.svg"
               alt="Codewars logo"
-              class="no-hover7"
+              id="no-hover7"
             >
             <img
               src="assets/4kyu.svg"
               alt="Codewars logo"
-              class="hover7"
+              id="hover7"
             >
           </a>
 
-          <span class="caption hover7">Codewars</span>
+          <span id="hover7">Codewars</span>
         </div>
       </li>
 
@@ -223,12 +223,12 @@
       <img
         src="assets/twitter-white.svg"
         alt="Twitter logo"
-        class="no-hover"
+        id="no-hover8"
       >
       <img
         src="assets/twitter.svg"
         alt="Twitter logo"
-        class="hover"
+        id="hover8"
       >
     </a>
   </div>

@@ -1,13 +1,11 @@
-.intro-container {
+.intro {
   display: grid;
   align-content: center;
   justify-content: center;
 
   height: 100vh;
   width: inherit;
-}
 
-.intro {
   &__text {
     padding: 0 1rem;
 

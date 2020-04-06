@@ -1,43 +1,43 @@
-<div class="nav-container">
+<div class="nav">
 
-  <div class="nav">
+  <div class="nav__main">
 
-    <div class="diamond-container">
+    <div class="nav__main--diamond">
       <span
-        class="diamond"
+        class="nav__main--diamond-effect"
         [ngStyle]="diamondPosition"
       ></span>
     </div>
 
     <a
-      [ngClass]="(page === '/#page-intro') ? 'nav__page selected' : 'nav__page'"
+      [ngClass]="(page === '/#page-intro') ? 'nav__main--page selected' : 'nav__main--page'"
       href="#page-intro"
     >
       Intro
     </a>
 
-    <div class="nav__divider"></div>
+    <div class="nav__main--divider"></div>
 
     <a
-      [ngClass]="(page === '/#page-about') ? 'nav__page selected' : 'nav__page'"
+      [ngClass]="(page === '/#page-about') ? 'nav__main--page selected' : 'nav__main--page'"
       href="#page-about"
     >
       About
     </a>
 
-    <div class="nav__divider"></div>
+    <div class="nav__main--divider"></div>
 
     <a
-      [ngClass]="(page === '/#page-projects') ? 'nav__page selected' : 'nav__page'"
+      [ngClass]="(page === '/#page-projects') ? 'nav__main--page selected' : 'nav__main--page'"
       href="#page-projects"
     >
       Projects
     </a>
 
-    <div class="nav__divider"></div>
+    <div class="nav__main--divider"></div>
 
     <a
-      [ngClass]="(page === '/#page-contact') ? 'nav__page selected' : 'nav__page'"
+      [ngClass]="(page === '/#page-contact') ? 'nav__main--page selected' : 'nav__main--page'"
       href="#page-contact"
     >
       Contact

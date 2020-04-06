@@ -1,21 +1,21 @@
-<span class="contact-container">
-  <span class="contact">
+<div class="contact">
+  <div class="contact__main">
 
-    <div class="contact__text">
+    <div class="contact__main--text">
       All things change in a dynamic environment.
     </div>
 
-    <div class="contact__title">
+    <div class="contact__main--title">
       Contact
     </div>
 
     <div
       (mouseenter)="onHover()"
       (mouseleave)="onHover()"
-      class="contact__email ember-btn"
+      class="contact__main--email ember-btn"
     >
 
-      <div class="contact__email--heading">
+      <div class="contact__main--email-heading">
         Email
       </div>
 
@@ -23,18 +23,18 @@
         (click)="onEmailAlert()"
         target="_top"
         href="mailto:CaraLagumen@gmail.com"
-        class="contact__email--link"
+        class="contact__main--email-link"
       >
         CaraLagumen@gmail.com
       </a>
 
-      <span class="contact__email--divider">| </span>
+      <span class="contact__main--email-divider">| </span>
 
       <a
         ngxClipboard
         [cbContent]="'CaraLagumen@gmail.com'"
         (click)="onCopyAlert()"
-        class="contact__email--copy"
+        class="contact__main--email-copy"
       >
         <img
           src="assets/copy-white.svg"
@@ -55,5 +55,5 @@
 
     </div>
 
-  </span>
-</span>
+  </div>
+</div>

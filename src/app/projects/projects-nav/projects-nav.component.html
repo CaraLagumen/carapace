@@ -1,8 +1,8 @@
-<div class="projects-nav-container">
+<div class="projects-nav">
 
   <span
     *ngIf="hide === true"
-    class="projects-nav-text"
+    class="projects-nav__text"
   >
     Explore
     <br><span>▼</span>
@@ -11,7 +11,7 @@
   <div
     *ngIf="hide === true"
     (click)="onToggleProjects()"
-    class="projects-nav-btn"
+    class="projects-nav__btn"
   >
     <span [@flicker]="hide">
       ■■
@@ -22,21 +22,21 @@
 
   <div
     @flicker
-    *ngIf="hide === false"
-    class="projects-nav"
+    *ngIf="!hide"
+    class="projects-nav__main"
   >
 
     <div
       *ngFor="let project of projects"
       (click)="onSelectProject(project)"
-      class="projects-nav__item"
+      class="projects-nav__main--item"
     >
 
-      <div class="projects-nav__item--title">
+      <div class="projects-nav__main--item-title">
         {{ project?.name }}
       </div>
 
-      <div class="projects-nav__item--img">
+      <div class="projects-nav__main--item-img">
         <img
           src="{{ project?.img }}"
           alt="{{ project?.name }} image"
@@ -47,8 +47,8 @@
 
     <div
       (click)="onToggleProjects()"
-      class="projects-nav__close"
-    >close</div>
+      class="projects-nav__main--close"
+    >▼ Return</div>
 
   </div>
 

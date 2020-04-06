@@ -7,7 +7,7 @@ import { Project } from "../project.model";
   selector: "app-projects-nav",
   templateUrl: "./projects-nav.component.html",
   styleUrls: ["./projects-nav.component.scss"],
-  animations: [flicker]
+  animations: [flicker],
 })
 export class ProjectsNavComponent implements OnInit {
   @Input() projects: Project[];

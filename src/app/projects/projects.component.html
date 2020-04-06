@@ -1,4 +1,4 @@
-<div class="app-projects-nav-container">
+<div id="projects-nav">
   <app-projects-nav
     [projects]="projects"
     (getSelectedProject)="onSetSelectedProject($event)"
@@ -6,35 +6,35 @@
   </app-projects-nav>
 </div>
 
-<div class="projects-container">
+<div class="projects">
 
   <div
     [@flicker]="selectedProject"
     *ngIf="projects"
-    class="projects"
+    class="projects__main"
   >
 
     <div
       (mouseenter)="onToggleDescription()"
       (mouseleave)="onToggleDescription()"
-      class="projects__main"
+      class="projects__main--view"
     >
       <div
         @slideIn
-        *ngIf="hide === false"
-        class="projects__main--description"
+        *ngIf="!hide"
+        class="projects__main--view-description"
       >
         <span [innerHTML]="formattedDescription"></span>
       </div>
 
       <div
         [@flicker]="projectTitle"
-        class="projects__main--title"
+        class="projects__main--view-title"
       >
         {{ projectTitle }}
       </div>
 
-      <div class="projects__main--clip">
+      <div class="projects__main--view-media">
         <img
           src="{{ selectedProject.img }}"
           alt="{{ selectedProject.name }} image"
@@ -42,9 +42,9 @@
       </div>
     </div>
 
-    <div class="projects__btns">
+    <div class="projects__main--btns">
 
-      <div class="projects__btns--stack">
+      <div class="projects__main--btns-stack">
 
         <img
           *ngIf="selectedProject.stack.includes('html')"
@@ -117,7 +117,7 @@
 
       </div>
 
-      <div class="projects__btns--access">
+      <div class="projects__main--btns-access">
 
         <a
           target="_blank"

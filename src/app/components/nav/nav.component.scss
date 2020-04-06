@@ -1,65 +1,66 @@
-.nav-container {
+.nav {
   display: grid;
   align-content: flex-end;
   justify-items: flex-end;
 
   padding: 2rem;
+
+  &__main {
+    display: grid;
+    justify-items: flex-end;
+
+    //KEEPS DIAMOND INSIDE CONTAINER
+    &--diamond {
+      position: fixed;
+      bottom: 35vh; //CONTROL WITH scrollY
+
+      margin: 1.15rem;
+
+      &-effect {
+        position: absolute;
+
+        height: 1.2rem;
+        width: 1.2rem;
+
+        background: transparent;
+        transform: rotate(-45deg);
+
+        transition: all 0.1s linear;
+        animation: pulse 1.5s infinite cubic-bezier(0.7, 0.02, 0.08, 1.52);
+      }
+    }
+
+    &--page {
+      opacity: 0.5;
+
+      color: var(--color-light);
+      font-family: var(--font-heading);
+      font-size: var(--font-medium);
+      font-weight: 500;
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    &--divider {
+      opacity: 0.4;
+
+      height: 6vh;
+      width: 0.1rem;
+      margin: 0.5rem;
+
+      background-color: var(--color-light);
+    }
+  }
 }
 
-.nav {
-  display: grid;
-  justify-items: flex-end;
-
-  //KEEPS DIAMOND INSIDE CONTAINER
-  .diamond-container {
-    position: fixed;
-    bottom: 35vh; //CONTROL WITH scrollY
-
-    margin: 1.15rem;
-
-    .diamond {
-      position: absolute;
-
-      height: 1.2rem;
-      width: 1.2rem;
-
-      background: transparent;
-      transform: rotate(-45deg);
-
-      transition: all 0.1s linear;
-      animation: pulse 1.5s infinite cubic-bezier(0.7, 0.02, 0.08, 1.52);
-    }
-  }
-
-  .selected {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-
-  &__page {
-    opacity: 0.5;
-
-    color: var(--color-light);
-    font-family: var(--font-heading);
-    font-size: var(--font-medium);
-    font-weight: 500;
-    text-transform: uppercase;
-
-    cursor: pointer;
-
-    &:hover {
-      opacity: 1;
-      transform: scale(1.2);
-    }
-  }
-
-  &__divider {
-    opacity: 0.4;
-
-    height: 6vh;
-    width: 0.1rem;
-    margin: 0.5rem;
-
-    background-color: var(--color-light);
-  }
+//EMPHASIZE SELECTED PAGE
+.selected {
+  opacity: 1;
+  transform: scale(1.2);
 }

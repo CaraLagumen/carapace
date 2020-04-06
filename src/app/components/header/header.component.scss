@@ -1,11 +1,11 @@
-.header-container {
+.header {
   display: grid;
   grid-template-columns: 20vw 1fr 20vw;
   align-content: center;
   align-items: center;
 
   //KEEPS IGNITE INSIDE CONTAINER
-  .ignite-container {
+  &__ignite {
     position: fixed;
 
     height: 6.5vh;
@@ -13,7 +13,7 @@
 
     overflow: hidden;
 
-    .ignite {
+    &--effect {
       position: absolute;
       top: 5rem; //KEEPS Y STATIC
       transform: translate(-50%, -50%);
@@ -30,15 +30,13 @@
         width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
     }
   }
-}
 
-.header {
   &__carapace {
     grid-column: 1 / 2;
     z-index: 5100;
 
     padding-top: 1rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
 
     &--svg {
       height: 4vh;
@@ -67,9 +65,12 @@
 
     &--list {
       display: flex;
-      gap: 4rem;
 
-      .link-container {
+      li {
+        padding: 0 2rem;
+      }
+
+      &-item {
         position: relative;
 
         width: 3.3rem;
@@ -95,7 +96,7 @@
           }
         }
 
-        .caption {
+        span {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -111,131 +112,6 @@
           text-align: center;
         }
       }
-
-      //TOGGLE SVGS BETWEEN HOVERS
-      &-youtube {
-        .hover1 {
-          display: none;
-        }
-
-        &:hover {
-          .hover1 {
-            display: inline;
-          }
-
-          .no-hover1 {
-            display: none;
-          }
-        }
-      }
-
-      &-resume {
-        .hover2 {
-          display: none;
-        }
-
-        &:hover {
-          .hover2 {
-            display: inline;
-          }
-
-          .no-hover2 {
-            display: none;
-          }
-        }
-      }
-
-      &-linkedin {
-        .hover3 {
-          display: none;
-        }
-
-        &:hover {
-          .hover3 {
-            display: inline;
-          }
-
-          .no-hover3 {
-            display: none;
-          }
-        }
-      }
-
-      &-github {
-        .hover4 {
-          display: none;
-        }
-
-        &:hover {
-          .hover4 {
-            display: inline;
-          }
-
-          .no-hover4 {
-            display: none;
-          }
-        }
-      }
-
-      &-codepen {
-        .hover5 {
-          display: none;
-        }
-
-        &:hover {
-          .hover5 {
-            display: inline;
-          }
-
-          .no-hover5 {
-            display: none;
-          }
-        }
-      }
-
-      &-replit {
-        .hover6 {
-          display: none;
-        }
-
-        &:hover {
-          .hover6 {
-            display: inline;
-          }
-
-          .no-hover6 {
-            display: none;
-          }
-        }
-      }
-
-      &-codewars {
-        img {
-          transform: scale(1.4);
-
-          &:hover {
-            transform: scale(1.47) !important;
-          }
-
-          &:active {
-            transform: scale(1.4) !important;
-          }
-        }
-
-        .hover7 {
-          display: none;
-        }
-
-        &:hover {
-          .hover7 {
-            display: inline;
-          }
-
-          .no-hover7 {
-            display: none;
-          }
-        }
-      }
     }
   }
 
@@ -244,21 +120,21 @@
     justify-self: flex-end;
     z-index: 5100;
 
-    padding-right: 1.5rem;
+    padding-right: 2.5rem;
 
     font-weight: 400;
 
     a {
-      .hover {
+      #hover8 {
         display: none;
       }
 
       &:hover {
-        .hover {
+        #hover8 {
           display: inline;
         }
 
-        .no-hover {
+        #no-hover8 {
           display: none;
         }
       }
@@ -283,6 +159,133 @@
 
       &:active {
         transform: scale(1);
+      }
+    }
+  }
+}
+
+//TOGGLE SVGS BETWEEN HOVERS
+#switch {
+  &-youtube {
+    #hover1 {
+      display: none;
+    }
+
+    &:hover {
+      #hover1 {
+        display: inline;
+      }
+
+      #no-hover1 {
+        display: none;
+      }
+    }
+  }
+
+  &-resume {
+    #hover2 {
+      display: none;
+    }
+
+    &:hover {
+      #hover2 {
+        display: inline;
+      }
+
+      #no-hover2 {
+        display: none;
+      }
+    }
+  }
+
+  &-linkedin {
+    #hover3 {
+      display: none;
+    }
+
+    &:hover {
+      #hover3 {
+        display: inline;
+      }
+
+      #no-hover3 {
+        display: none;
+      }
+    }
+  }
+
+  &-github {
+    #hover4 {
+      display: none;
+    }
+
+    &:hover {
+      #hover4 {
+        display: inline;
+      }
+
+      #no-hover4 {
+        display: none;
+      }
+    }
+  }
+
+  &-codepen {
+    #hover5 {
+      display: none;
+    }
+
+    &:hover {
+      #hover5 {
+        display: inline;
+      }
+
+      #no-hover5 {
+        display: none;
+      }
+    }
+  }
+
+  &-replit {
+    #hover6 {
+      display: none;
+    }
+
+    &:hover {
+      #hover6 {
+        display: inline;
+      }
+
+      #no-hover6 {
+        display: none;
+      }
+    }
+  }
+
+  &-codewars {
+    img {
+      transform: scale(1.4);
+
+      &:hover {
+        transform: scale(1.47) !important;
+      }
+
+      &:active {
+        transform: scale(1.4) !important;
+      }
+    }
+
+    #hover7 {
+      display: none;
+    }
+
+    &:hover {
+      #hover7 {
+        display: inline;
+      }
+
+      #no-hover7 {
+        display: none;
       }
     }
   }

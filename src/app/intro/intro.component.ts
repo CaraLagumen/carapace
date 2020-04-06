@@ -1,4 +1,10 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+} from "@angular/core";
 import { Subscription } from "rxjs";
 
 import { flicker } from "../shared/animations";
@@ -8,7 +14,8 @@ import { FirebaseService } from "../shared/firebase.service";
   selector: "app-intro",
   templateUrl: "./intro.component.html",
   styleUrls: ["./intro.component.scss"],
-  animations: [flicker]
+  animations: [flicker],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IntroComponent implements OnInit, OnDestroy {
   private firebaseSub: Subscription;
@@ -16,11 +23,14 @@ export class IntroComponent implements OnInit, OnDestroy {
   introText: string;
   introTextArr: string[];
 
-  constructor(private firebaseService: FirebaseService) {}
+  constructor(
+    private firebaseService: FirebaseService,
+    private cd: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     //FETCH THE GOODS
-    this.firebaseSub = this.firebaseService.getIntro().subscribe(intro => {
+    this.firebaseSub = this.firebaseService.getIntro().subscribe((intro) => {
       this.introTextArr = intro;
 
       this.onLoopIntro();
@@ -36,7 +46,9 @@ export class IntroComponent implements OnInit, OnDestroy {
 
     setTimeout(() => {
       this.onLoopIntro();
-    }, Math.floor(Math.random() * 8000));
+    }, Math.floor(Math.random() * (10000 - 8000) + 8000)); //(MAX - MIN) + MIN
+
+    this.cd.markForCheck();
   }
 
   ngOnDestroy() {

@@ -1,8 +1,7 @@
-<div class="about-container">
+<div class="about">
 
   <div
-    @flicker
-    *ngIf="aboutText && !blog"
+    *ngIf="(aboutText$ | async) && !blog"
     class="about__main"
   >
 
@@ -15,8 +14,8 @@
       class="about__main--text"
     >
       <div
-        @flicker
-        [innerHTML]="aboutTextFormatted"
+        [@flicker]="(aboutTextFormatted$ | async)"
+        [innerHTML]="(aboutTextFormatted$ | async)"
         class="about__main--text-main"
       >
       </div>
@@ -27,7 +26,7 @@
       class="about__main--text"
     >
       <div class="about__main--text-main">
-        {{ aboutText[0] }}
+        {{ (aboutText$ | async | slice:0:1) }}
       </div>
 
       <div
@@ -50,13 +49,13 @@
   </div>
 
   <div
-    @flicker
-    *ngIf="blog"
+    [@flicker]="(posts$ | async)"
+    *ngIf="(posts$ | async) && blog"
     class="about__blog"
   >
 
     <div
-      *ngFor="let post of posts"
+      *ngFor="let post of (posts$ | async)"
       class="item-container"
     >
 
@@ -68,7 +67,7 @@
       </div>
 
       <div
-        *ngFor="let post of posts"
+        *ngFor="let post of (posts$ | async)"
         class="about__blog--item"
       >
         <div class="about__blog--item-date">
@@ -82,7 +81,7 @@
     </div>
 
     <div
-      *ngFor="let post of posts"
+      *ngFor="let post of (posts$ | async)"
       [innerHTML]="post.content"
       class="about__blog--content"
     >

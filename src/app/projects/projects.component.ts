@@ -1,4 +1,10 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+} from "@angular/core";
 import { Subscription } from "rxjs";
 
 import { flicker, slideIn } from "../shared/animations";
@@ -11,6 +17,7 @@ import { AlertService } from "../components/alert/alert.service";
   templateUrl: "./projects.component.html",
   styleUrls: ["./projects.component.scss"],
   animations: [flicker, slideIn],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
   private firebaseSub: Subscription;
@@ -24,7 +31,8 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   constructor(
     private firebaseService: FirebaseService,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private cd: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
@@ -35,6 +43,8 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         this.projects = projects;
         this.selectedProject = projects[0];
         this.onFormatDescription();
+
+        this.cd.markForCheck();
       });
 
     //GITS ANYONE?

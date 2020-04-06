@@ -1,5 +1,6 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
-import { Subscription } from "rxjs";
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
 
 import { flicker } from "../shared/animations";
 import { FirebaseService } from "../shared/firebase.service";
@@ -10,14 +11,12 @@ import { BloggerService } from "../shared/blogger.service";
   templateUrl: "./about.component.html",
   styleUrls: ["./about.component.scss"],
   animations: [flicker],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutComponent implements OnInit, OnDestroy {
-  private firebaseSub: Subscription;
-  private bloggerSub: Subscription;
-
-  aboutText: string[];
-  aboutTextFormatted: string;
-  posts: any[];
+export class AboutComponent implements OnInit {
+  aboutText$: Observable<string[]>;
+  aboutTextFormatted$: Observable<string>;
+  posts$: Observable<any[]>;
   readMore: boolean = false;
   blog: boolean = false;
 
@@ -28,16 +27,18 @@ export class AboutComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     //FETCH THE GOODS
-    this.firebaseSub = this.firebaseService.getAbout().subscribe((about) => {
-      this.aboutText = about;
+    this.aboutText$ = this.firebaseService
+      .getAbout()
+      .pipe(map((about: string[]) => about));
 
-      //ADD BREAK BETWEEN STRINGS - USE WITH INNERHTML
-      this.aboutTextFormatted = about.join(" <br><br> ");
-    });
+    //ADD BREAK BETWEEN STRINGS - USE WITH INNERHTML
+    this.aboutTextFormatted$ = this.firebaseService
+      .getAbout()
+      .pipe(map((about: string[]) => about.join(" <br><br> ")));
 
-    this.bloggerSub = this.bloggerService.getPosts().subscribe((posts) => {
-      this.posts = posts.items;
-    });
+    this.posts$ = this.bloggerService
+      .getPosts()
+      .pipe(map((posts) => posts.items));
   }
 
   onReadMore() {
@@ -46,10 +47,5 @@ export class AboutComponent implements OnInit, OnDestroy {
 
   onToggleBlog() {
     this.blog = !this.blog;
-  }
-
-  ngOnDestroy() {
-    this.firebaseSub.unsubscribe();
-    this.bloggerSub.unsubscribe();
   }
 }

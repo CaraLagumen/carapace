@@ -1,4 +1,4 @@
-<div class="alert-container">
+<div class="alert">
 
   <div
     @flicker
@@ -7,12 +7,12 @@
   >
     <span
       [innerHTML]="alert.message"
-      class="alert__message"
+      class="alert__main--message"
     ></span>
 
     <a
       (click)="removeAlert(alert)"
-      class="alert__close pointer"
+      class="alert__main--close pointer"
     >&times;</a>
 
   </div>
