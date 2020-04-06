@@ -17,6 +17,41 @@ html {
 
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+
+  @media only screen and (max-height: 45em) {
+    //720H
+    font-size: 52%;
+  }
+
+  @media only screen and (max-height: 24em) {
+    //375H
+    font-size: 42%;
+  }
+
+  @media only screen and (min-height: 45em) {
+    //720H
+    font-size: 52%;
+  }
+
+  @media only screen and (min-height: 56em) {
+    //900H
+    font-size: 62.5%;
+  }
+
+  @media only screen and (min-height: 67em) {
+    //1080H
+    font-size: 80%;
+  }
+
+  @media only screen and (min-height: 90em) {
+    //1440H
+    font-size: 120%;
+  }
+
+  @media only screen and (min-height: 135em) {
+    //2160H
+    font-size: 150%;
+  }
 }
 
 body {

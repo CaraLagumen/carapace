@@ -9,12 +9,37 @@
     display: grid;
     justify-items: flex-end;
 
-    //KEEPS DIAMOND INSIDE CONTAINER
+    //KEEPS DIAMOND INSIDE
     &--diamond {
       position: fixed;
       bottom: 35vh; //CONTROL WITH scrollY
 
       margin: 1.15rem;
+
+      @media only screen and (min-height: 44em) {
+        //720H
+        bottom: 35.8vh;
+      }
+
+      @media only screen and (min-height: 56em) {
+        //900H
+        bottom: 35.4vh;
+      }
+
+      @media only screen and (min-height: 67em) {
+        //1080H
+        bottom: 36.2vh;
+      }
+
+      @media only screen and (min-height: 90em) {
+        //1440H
+        bottom: 37.5vh;
+      }
+
+      @media only screen and (min-height: 135em) {
+        //2160H
+        bottom: 35.4vh;
+      }
 
       &-effect {
         position: absolute;

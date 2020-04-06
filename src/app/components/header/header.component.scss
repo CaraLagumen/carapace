@@ -4,14 +4,32 @@
   align-content: center;
   align-items: center;
 
+  height: 100%;
+
   //KEEPS IGNITE INSIDE CONTAINER
   &__ignite {
     position: fixed;
 
-    height: 6.5vh;
+    height: 5.8vh;
     width: 100%;
 
     overflow: hidden;
+
+    //CONTROL WITH APP COMPONENT
+    @media only screen and (min-height: 45em) {
+      //720H
+      height: 5.6vh;
+    }
+
+    @media only screen and (min-height: 67em) {
+      //1080H
+      height: 5.6vh;
+    }
+
+    @media only screen and (min-height: 135em) {
+      //2160H
+      height: 6.5vh;
+    }
 
     &--effect {
       position: absolute;
@@ -33,13 +51,16 @@
 
   &__carapace {
     grid-column: 1 / 2;
+    align-self: center;
     z-index: 5100;
 
-    padding-top: 1rem;
+    padding-top: 0.2rem;
     padding-left: 2rem;
 
-    &--svg {
-      height: 4vh;
+    img {
+      height: 3.8rem;
+
+      vertical-align: middle;
 
       transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
         width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
