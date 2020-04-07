@@ -103,42 +103,56 @@
 
     font-style: italic;
 
-    .item-container {
+    &--nav {
       grid-column: 1 / 2;
 
       font-size: var(--font-small);
-
+      overflow-x: hidden;
       overflow-y: auto;
-    }
 
-    &--close {
-      padding: 1rem;
+      &-close {
+        padding: 1rem;
 
-      border-bottom: solid 0.1rem var(--color-light-grey);
+        border-bottom: solid 0.1rem var(--color-light-grey);
 
-      font-weight: 300;
-      text-transform: lowercase;
+        font-weight: 300;
+        text-transform: lowercase;
 
-      cursor: pointer;
+        cursor: pointer;
 
-      &:hover {
         &:hover {
-          color: var(--color-accent1);
+          &:hover {
+            color: var(--color-accent1);
+          }
+        }
+
+        &:active {
+          transform: scale(1.02);
         }
       }
 
-      &:active {
-        transform: scale(1.02);
-      }
-    }
+      &-item {
+        padding: 1rem;
 
-    &--item {
-      padding: 1rem;
+        border-bottom: solid 0.1rem var(--color-light-grey);
 
-      border-bottom: solid 0.1rem var(--color-light-grey);
+        cursor: pointer;
 
-      &-date {
-        font-size: var(--font-xsmall);
+        &-date {
+          font-size: var(--font-xsmall);
+        }
+
+        &-title {
+          &:hover {
+            &:hover {
+              color: var(--color-accent1);
+            }
+          }
+
+          &:active {
+            transform: scale(1.02);
+          }
+        }
       }
     }
 

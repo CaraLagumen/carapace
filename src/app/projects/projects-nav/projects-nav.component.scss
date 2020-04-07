@@ -46,7 +46,7 @@
     padding: 1rem;
     opacity: 0.5;
 
-    color: var(--color-accent1);
+    color: var(--color-accent2);
     font-size: var(--font-medium);
     letter-spacing: -0.5rem;
     line-height: 1rem;
@@ -70,7 +70,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 1fr);
     grid-template-rows: 15vh;
-    align-items: space;
     gap: 1rem;
 
     opacity: 0.9;
@@ -80,8 +79,8 @@
 
       display: grid;
 
-      background-color: rgba(#c06839, 0.2);
-      border: solid 0.1rem rgba(#c06839, 0.2);
+      background-color: rgba(#34c96a, 0.2);
+      border-top: solid 0.2rem rgba(#f2f2f2, 0.6);
       transform: skewX(-4deg);
 
       cursor: pointer;
@@ -90,7 +89,7 @@
       &:hover {
         grid-column: span 2;
 
-        border: solid 0.5rem rgba(#c06839, 0.2);
+        border: solid 0.5rem rgba(#34c96a, 0.2);
       }
 
       &:active {
@@ -100,14 +99,15 @@
       &-title {
         grid-column: 1 / -1;
         grid-row: 1 / -1;
-        align-self: center;
-        justify-self: center;
         z-index: 6000;
+
+        padding-left: 0.5rem;
 
         font-family: var(--font-heading);
         font-size: var(--font-large);
         font-style: italic;
         font-weight: 400;
+        line-height: 3rem;
         text-transform: none;
         text-shadow: 0 0.4rem 0.2rem rgba(black, 0.5);
       }

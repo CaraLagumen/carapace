@@ -1,10 +1,10 @@
-<div class="app-container">
+<div class="app">
 
   <app-header></app-header>
   <app-alert></app-alert>
   <app-nav></app-nav>
 
-  <div class="main-container">
+  <div class="app__main">
 
     <app-intro
       id="page-intro"
@@ -25,8 +25,12 @@
 
     <div
       #rendererContainer
-      class="renderer"
-    ></div>
+      id="renderer"
+    >
+      <div class="app__main--bg1"></div>
+      <div class="app__main--bg2"></div>
+    </div>
+
 
   </div>
 

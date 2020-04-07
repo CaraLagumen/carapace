@@ -94,8 +94,6 @@
       &-item {
         position: relative;
 
-        width: 3.3rem;
-
         img {
           height: 3.3rem;
           width: 3.3rem;
@@ -182,6 +180,32 @@
         transform: scale(1);
       }
     }
+  }
+
+  &__bg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(#222325, 1);
+    clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+  }
+
+  &__bg2 {
+    position: absolute;
+    top: -0.1rem;
+    left: 0;
+    z-index: -1100;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(white, 0.1);
+    clip-path: polygon(50% 50%, 0 100%, 100% 100%);
   }
 }
 

@@ -32,7 +32,7 @@ app-nav {
   z-index: 5000;
 }
 
-.renderer {
+#renderer {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -42,12 +42,40 @@ app-nav {
   opacity: 0.5;
 }
 
-.main-container {
-  position: relative;
-  z-index: 1000;
+.app {
+  &__main {
+    position: relative;
+    z-index: 1000;
 
-  background: linear-gradient(to bottom, var(--color-dark), var(--color-grey))
-    no-repeat;
+    background: linear-gradient(to bottom, var(--color-dark), var(--color-grey))
+      no-repeat;
+
+    &--bg1 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -2000;
+
+      height: 100%;
+      width: 100%;
+
+      background-color: rgba(black, 0.05);
+      clip-path: polygon(50% 50%, 0 0, 100% 0);
+    }
+
+    &--bg2 {
+      position: fixed;
+      top: -0.01rem;
+      left: 0;
+      z-index: -2000;
+
+      height: 100vh;
+      width: 100%;
+
+      background-color: rgba(#f2f2f2, 0.01);
+      clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+    }
+  }
 }
 
 .scrollable {

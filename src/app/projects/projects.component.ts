@@ -26,8 +26,8 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   projects: Project[];
   selectedProject: Project;
   formattedDescription: string;
-  hide: boolean = true;
   url: any;
+  hide: boolean = true;
 
   constructor(
     private firebaseService: FirebaseService,

@@ -55,25 +55,27 @@
   >
 
     <div
-      *ngFor="let post of (posts$ | async)"
-      class="item-container"
+      class="about__blog--nav"
     >
 
       <div
         (click)="onToggleBlog()"
-        class="about__blog--close"
+        class="about__blog--nav-close"
       >
         ◄ Return
       </div>
 
       <div
         *ngFor="let post of (posts$ | async)"
-        class="about__blog--item"
+        class="about__blog--nav-item"
       >
-        <div class="about__blog--item-date">
+        <div class="about__blog--nav-item-date">
           {{ post.published | date:'short' }}
         </div>
-        <div class="about__blog--item-title">
+        <div
+          (click)="onSelectedPost(post)"
+          class="about__blog--nav-item-title"
+        >
           {{ post.title }}
         </div>
       </div>
@@ -81,10 +83,13 @@
     </div>
 
     <div
-      *ngFor="let post of (posts$ | async)"
-      [innerHTML]="post.content"
+      [@flicker]="selectedPost"
+      [innerHTML]="selectedPost.content"
       class="about__blog--content"
     >
+      Hello there. Welcome to my logs. Here, you will find the
+      reality of my programming journey. Apologies in advance if
+      I ramble.
     </div>
 
   </div>

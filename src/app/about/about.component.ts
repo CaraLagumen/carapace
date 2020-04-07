@@ -17,6 +17,7 @@ export class AboutComponent implements OnInit {
   aboutText$: Observable<string[]>;
   aboutTextFormatted$: Observable<string>;
   posts$: Observable<any[]>;
+  selectedPost: any;
   readMore: boolean = false;
   blog: boolean = false;
 
@@ -38,7 +39,7 @@ export class AboutComponent implements OnInit {
 
     this.posts$ = this.bloggerService
       .getPosts()
-      .pipe(map((posts) => posts.items));
+      .pipe(map((posts: any) => posts.items));
   }
 
   onReadMore() {
@@ -47,5 +48,9 @@ export class AboutComponent implements OnInit {
 
   onToggleBlog() {
     this.blog = !this.blog;
+  }
+
+  onSelectedPost(post) {
+    this.selectedPost = post;
   }
 }
