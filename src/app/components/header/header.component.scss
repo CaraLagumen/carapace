@@ -57,6 +57,11 @@
     padding-top: 0.2rem;
     padding-left: 2rem;
 
+    @media only screen and (max-width: 65em) {
+      //1024W
+      padding-left: 1rem;
+    }
+
     img {
       height: 3.8rem;
 
@@ -89,6 +94,11 @@
 
       li {
         padding: 0 2rem;
+
+        @media only screen and (max-width: 65em) {
+          //1024W
+          padding: 0 1rem;
+        }
       }
 
       &-item {
@@ -142,6 +152,11 @@
     padding-right: 2.5rem;
 
     font-weight: 400;
+
+    @media only screen and (max-width: 65em) {
+      //1024W
+      padding-right: 1.5rem;
+    }
 
     a {
       #hover8 {

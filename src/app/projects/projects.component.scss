@@ -73,6 +73,11 @@
 
         overflow: hidden;
 
+        @media only screen and (max-width: 65em) {
+          //1024W
+          font-size: var(--font-small);
+        }
+
         span {
           position: absolute;
           top: 50%;
@@ -129,6 +134,14 @@
         height: 4rem;
         width: 34rem;
 
+        @media only screen and (max-width: 65em) {
+          //1024W
+          gap: 0.2rem;
+
+          height: 3.5rem;
+          width: 30rem;
+        }
+
         img {
           grid-row: 1 / -1;
 
@@ -138,6 +151,12 @@
           vertical-align: middle;
 
           cursor: pointer;
+
+          @media only screen and (max-width: 65em) {
+            //1024W
+            height: 3.5rem;
+            width: 3.5rem;
+          }
         }
 
         .mongodb {
@@ -166,6 +185,11 @@
         justify-self: flex-end;
         gap: 2rem;
 
+        @media only screen and (max-width: 65em) {
+          //1024W
+          gap: 1rem;
+        }
+
         .github {
           grid-row: 1 / -1;
           align-self: center;
@@ -191,6 +215,12 @@
 
             transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
               width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
+
+            @media only screen and (max-width: 65em) {
+              //1024W
+              height: 4rem;
+              width: 4rem;
+            }
 
             &:hover {
               transform: scale(1.05);
@@ -224,6 +254,11 @@
           text-transform: uppercase;
 
           overflow: hidden;
+
+          @media only screen and (max-width: 65em) {
+            //1024W
+            font-size: var(--font-medium);
+          }
 
           &:hover {
             transform: skewX(-2deg) translateY(-0.1rem);

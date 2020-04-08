@@ -9,6 +9,7 @@
   &__main {
     display: grid;
     grid-template-rows: 5vh 1fr 5vh;
+    align-content: center;
     gap: 2rem;
 
     max-height: 40vh;
@@ -30,12 +31,14 @@
       line-height: 2.6rem;
       text-transform: none;
 
-      &-main {
+      &-content {
         padding: 2rem 3rem;
 
         background-color: rgba(black, 0.5);
         border-top: solid 0.5rem rgba(#f2f2f2, 0.6);
         transform: skewX(-2deg);
+
+        text-align: justify;
       }
 
       &-more {

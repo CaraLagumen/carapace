@@ -23,12 +23,17 @@
 
       @media only screen and (min-height: 56em) {
         //900H
-        bottom: 35vh;
+        bottom: 34.8vh;
       }
 
       @media only screen and (min-height: 67em) {
         //1080H
         bottom: 36.2vh;
+      }
+
+      @media only screen and (min-height: 85em) {
+        //1366H
+        bottom: 33.6vh;
       }
 
       @media only screen and (min-height: 90em) {

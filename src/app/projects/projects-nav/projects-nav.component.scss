@@ -110,6 +110,11 @@
         line-height: 3rem;
         text-transform: none;
         text-shadow: 0 0.4rem 0.2rem rgba(black, 0.5);
+
+        @media only screen and (max-width: 65em) {
+          //1024W
+          font-size: var(--font-medium);
+        }
       }
 
       &-media {

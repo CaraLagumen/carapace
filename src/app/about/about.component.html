@@ -16,7 +16,7 @@
       <div
         [@flicker]="(aboutTextFormatted$ | async)"
         [innerHTML]="(aboutTextFormatted$ | async)"
-        class="about__main--text-main"
+        class="about__main--text-content"
       >
       </div>
     </div>
@@ -25,7 +25,7 @@
       *ngIf="!readMore"
       class="about__main--text"
     >
-      <div class="about__main--text-main">
+      <div class="about__main--text-content">
         {{ (aboutText$ | async | slice:0:1) }}
       </div>
 
@@ -54,9 +54,7 @@
     class="about__blog"
   >
 
-    <div
-      class="about__blog--nav"
-    >
+    <div class="about__blog--nav">
 
       <div
         (click)="onToggleBlog()"
@@ -87,9 +85,13 @@
       [innerHTML]="selectedPost.content"
       class="about__blog--content"
     >
-      Hello there. Welcome to my logs. Here, you will find the
-      reality of my programming journey. Apologies in advance if
-      I ramble.
+      Hello there. Welcome to my logs, otherwise called TMI. Here,
+      you will find the reality of my programming journey, comprised of
+      sweat, tears, and suspense.
+      <br><br>
+      Please choose an entry on the left to get started. Caution: rambling ahead.
+      <br><br>
+      Powered by Blogger and my brain.
     </div>
 
   </div>
