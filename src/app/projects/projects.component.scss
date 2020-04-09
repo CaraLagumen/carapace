@@ -65,18 +65,13 @@
         background-color: rgba(black, 0.8);
 
         font-family: var(--font-primary);
-        font-size: var(--font-medium);
+        font-size: var(--font-small);
         font-style: italic;
         font-weight: 300;
         line-height: 2.6rem;
         text-align: right;
 
         overflow: hidden;
-
-        @media only screen and (max-width: 65em) {
-          //1024W
-          font-size: var(--font-small);
-        }
 
         span {
           position: absolute;

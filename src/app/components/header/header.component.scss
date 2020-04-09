@@ -6,6 +6,12 @@
 
   height: 100%;
 
+  @media only screen and (max-width: 34em) {
+    //550W
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 50% 50%;
+  }
+
   //KEEPS IGNITE INSIDE CONTAINER
   &__ignite {
     position: fixed;
@@ -31,6 +37,11 @@
       height: 6.5vh;
     }
 
+    @media only screen and (max-width: 34em) {
+      //550W
+      height: 11.5rem;
+    }
+
     &--effect {
       position: absolute;
       top: 5rem; //KEEPS Y STATIC
@@ -46,6 +57,14 @@
 
       transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
         width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
+
+      @media only screen and (max-width: 34em) {
+        //550W
+        top: 12rem;
+
+        height: 20rem !important;
+        width: 10rem !important;
+      }
     }
   }
 
@@ -62,6 +81,11 @@
       padding-left: 1rem;
     }
 
+    @media only screen and (max-width: 34em) {
+      //550W
+      padding-top: 2rem;
+    }
+
     img {
       height: 3.8rem;
 
@@ -69,6 +93,11 @@
 
       transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
         width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
+
+      @media only screen and (max-width: 34em) {
+        //550W
+        height: 5rem;
+      }
 
       &:hover {
         transform: scale(1.05);
@@ -89,6 +118,12 @@
     justify-items: center;
     z-index: 5100;
 
+    @media only screen and (max-width: 34em) {
+      //550W
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+
     &--list {
       display: flex;
 
@@ -98,6 +133,11 @@
         @media only screen and (max-width: 65em) {
           //1024W
           padding: 0 1rem;
+        }
+
+        @media only screen and (max-width: 34em) {
+          //550W
+          padding-bottom: 1rem;
         }
       }
 
@@ -112,6 +152,12 @@
 
           transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
             width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
+
+          @media only screen and (max-width: 34em) {
+            //550W
+            height: 4.5rem;
+            width: 4.5rem;
+          }
 
           &:hover {
             transform: scale(1.05);
@@ -139,6 +185,13 @@
 
           font-weight: bold;
           text-align: center;
+
+          @media only screen and (max-width: 34em) {
+            //550W
+          transform: translate(-50%, 4rem);
+
+            font-size: var(--font-xsmall);
+          }
         }
       }
     }
@@ -152,10 +205,21 @@
     padding-right: 2.5rem;
 
     font-weight: 400;
+    text-align: right;
 
     @media only screen and (max-width: 65em) {
       //1024W
       padding-right: 1.5rem;
+    }
+
+    @media only screen and (max-width: 34em) {
+      //550W
+      grid-column: 2 / -1;
+      grid-row: 1 / 2;
+
+      padding-top: 1rem;
+
+      font-size: var(--font-xsmall);
     }
 
     a {
@@ -183,6 +247,12 @@
 
       transition: height 0.1s cubic-bezier(0.7, 0.02, 0.08, 1.52),
         width 0.2s cubic-bezier(0.7, 0.02, 0.08, 1.52);
+
+      @media only screen and (max-width: 34em) {
+        //550W
+        height: 3.5rem;
+        width: 3.5rem;
+      }
 
       &:hover {
         transform: scale(1.05);

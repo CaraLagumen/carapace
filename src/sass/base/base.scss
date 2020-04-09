@@ -18,6 +18,7 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 
+  //BY HEIGHTS
   @media only screen and (max-height: 45em) {
     //720H
     font-size: 52%;
@@ -51,6 +52,22 @@ html {
   @media only screen and (min-height: 135em) {
     //2160H
     font-size: 150%;
+  }
+
+  //BY WIDTHS (PRIORITY)
+  @media only screen and (max-width: 47em) {
+    //750W
+    font-size: 60%;
+  }
+
+  @media only screen and (max-width: 40em) {
+    //650W
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: 34em) {
+    //550W
+    font-size: 40%;
   }
 }
 
