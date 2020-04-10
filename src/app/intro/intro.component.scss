@@ -6,6 +6,8 @@
   height: 100vh;
   width: 100%;
 
+  overflow: hidden;
+
   &__text {
     align-self: center;
     justify-self: center;
@@ -25,6 +27,12 @@
     @media only screen and (max-width: 78em) {
       //1250W
       width: 75%;
+      word-break: break-all;
+    }
+
+    @media only screen and (max-width: 34em) {
+      //550W
+      width: 100%;
       word-break: break-all;
     }
   }

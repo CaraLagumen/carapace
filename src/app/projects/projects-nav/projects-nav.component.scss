@@ -3,6 +3,12 @@
   width: 75vw;
   padding: 1rem;
 
+  @media only screen and (max-width: 34em) {
+    //550W
+    margin-left: -8rem;
+    padding-top: 2rem;
+  }
+
   &__text {
     position: absolute;
     top: 15%;
@@ -132,7 +138,7 @@
       position: absolute;
       top: -1.5rem;
       left: 1rem;
-      z-index: 9999;
+      z-index: 9999 !important;
 
       font-size: var(--font-small);
       font-style: italic;
@@ -141,6 +147,12 @@
       text-transform: lowercase;
 
       cursor: pointer;
+
+      @media only screen and (max-width: 34em) {
+        //550W
+        padding-top: 1rem;
+        margin-left: -8rem;
+      }
 
       &:hover {
         &:hover {

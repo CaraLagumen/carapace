@@ -6,6 +6,8 @@
   height: 100vh;
   width: inherit;
 
+  overflow: hidden;
+
   &__main {
     display: grid;
     grid-template-rows: 5vh 1fr 5vh;
@@ -15,6 +17,12 @@
     max-height: 40vh;
     width: 60vw;
 
+    @media only screen and (max-width: 34em) {
+      //550W
+      max-height: 80vh;
+      width: 100%;
+    }
+
     &--title {
       transform: skewX(-8deg);
 
@@ -22,6 +30,11 @@
       font-size: var(--font-xlarge);
       font-weight: 500;
       text-transform: none;
+
+      @media only screen and (max-width: 34em) {
+        //550W
+        margin-left: 3rem;
+      }
     }
 
     &--text {
@@ -80,6 +93,11 @@
 
       overflow: hidden;
 
+      @media only screen and (max-width: 34em) {
+        //550W
+        margin-right: 2rem;
+      }
+
       &:hover {
         transform: skewX(-2deg) translateY(-0.1rem);
       }
@@ -106,12 +124,32 @@
 
     font-style: italic;
 
+    overflow: hidden;
+
+    @media only screen and (max-width: 34em) {
+      //550W
+      grid-template-columns: 100%;
+      grid-template-rows: 70% 30%;
+
+      max-height: 80vh;
+      width: 100%;
+    }
+
     &--nav {
       grid-column: 1 / 2;
 
       font-size: var(--font-small);
+
       overflow-x: hidden;
       overflow-y: auto;
+
+      @media only screen and (max-width: 34em) {
+        //550W
+        grid-column: 1 / -1;
+        grid-row: 2 / -1;
+
+        border-top: solid 0.1rem var(--color-light-grey);
+      }
 
       &-close {
         padding: 1rem;
@@ -169,6 +207,12 @@
       text-transform: none;
 
       overflow-y: auto;
+
+      @media only screen and (max-width: 34em) {
+        //550W
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+      }
     }
   }
 }
