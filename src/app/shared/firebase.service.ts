@@ -14,17 +14,17 @@ const ROOT_URL = environment.apiUrl;
 export class FirebaseService {
   constructor(private http: HttpClient) {}
 
-  @Cacheable()
+  @Cacheable({ cacheBusterObserver: new Observable<string[]>() })
   getIntro(): Observable<string[]> {
     return this.http.get<string[]>(`${ROOT_URL}/intro.json`);
   }
 
-  @Cacheable()
+  @Cacheable({ cacheBusterObserver: new Observable<string[]>() })
   getAbout(): Observable<string[]> {
     return this.http.get<string[]>(`${ROOT_URL}/about.json`);
   }
 
-  @Cacheable()
+  @Cacheable({ cacheBusterObserver: new Observable<Project[]>() })
   getProjects(): Observable<Project[]> {
     return this.http.get<Project[]>(`${ROOT_URL}/projects.json`);
   }

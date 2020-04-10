@@ -52,6 +52,10 @@
         display: none;
       }
 
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        right: 3vw;
+      }
+
       &-effect {
         position: absolute;
 

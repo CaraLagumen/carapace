@@ -14,7 +14,7 @@ const API_KEY = environment.apiKey;
 export class BloggerService {
   constructor(private http: HttpClient) {}
 
-  @Cacheable()
+  @Cacheable({ cacheBusterObserver: new Observable<any>() })
   getPosts(): Observable<any> {
     return this.http.get<any>(`${ROOT_URL}/posts?key=${API_KEY}`);
   }
