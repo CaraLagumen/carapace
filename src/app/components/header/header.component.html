@@ -32,7 +32,7 @@
         <div class="header__links--list-item">
           <a
             target="_blank"
-            href="https://www.youtube.com/channel/UCMq9sTJuuBKPpSpvCoYB7Cg"
+            [href]="links.youtube"
           >
             <img
               src="assets/youtube-white.svg"
@@ -58,7 +58,7 @@
         <div class="header__links--list-item">
           <a
             target="_blank"
-            href="#"
+            [href]="links.resume"
           >
             <img
               src="assets/resume-white.svg"
@@ -84,7 +84,7 @@
         <div class="header__links--list-item">
           <a
             target="_blank"
-            href="#"
+            [href]="links.linkedin"
           >
             <img
               src="assets/linkedin-white.svg"
@@ -110,7 +110,7 @@
         <div class="header__links--list-item">
           <a
             target="_blank"
-            href="https://github.com/CaraLagumen"
+            [href]="links.github"
           >
             <img
               src="assets/github-white.svg"
@@ -136,7 +136,7 @@
         <div class="header__links--list-item">
           <a
             target="_blank"
-            href="https://codepen.io/CaraLagumen"
+            [href]="links.codepen"
           >
             <img
               src="assets/codepen-white.svg"
@@ -162,7 +162,7 @@
         <div class="header__links--list-item">
           <a
             target="_blank"
-            href="https://repl.it/@CaraLagumen"
+            [href]="links.replit"
           >
             <img
               src="assets/replit-white.svg"
@@ -188,7 +188,7 @@
         <div class="header__links--list-item">
           <a
             target="_blank"
-            href="https://www.codewars.com/users/CaraLagumen"
+            [href]="links.codewars"
           >
             <img
               src="assets/4kyu-white.svg"
@@ -214,10 +214,10 @@
     (mouseleave)="isIgnite = false"
     class="header__copyright"
   >
-    © By Cara Lagumen
+    w/♥ from Cara
     <a
       target="_blank"
-      href="https://twitter.com/CaraLagumen"
+      [href]="links.twitter"
     >
       <img
         src="assets/twitter-white.svg"

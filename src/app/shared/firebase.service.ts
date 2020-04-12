@@ -5,6 +5,7 @@ import { Cacheable } from "ngx-cacheable";
 
 import { environment } from "src/environments/environment";
 import { Project } from "../projects/project.model";
+import { Link } from '../components/header/link.model';
 
 const ROOT_URL = environment.apiUrl;
 
@@ -13,6 +14,11 @@ const ROOT_URL = environment.apiUrl;
 })
 export class FirebaseService {
   constructor(private http: HttpClient) {}
+
+  @Cacheable({ cacheBusterObserver: new Observable<Link[]>() })
+  getLinks(): Observable<Link> {
+    return this.http.get<Link>(`${ROOT_URL}/links.json`);
+  }
 
   @Cacheable({ cacheBusterObserver: new Observable<string[]>() })
   getIntro(): Observable<string[]> {
