@@ -36,8 +36,8 @@
 
       <div class="projects__main--view-media">
         <img
-          src="{{ selectedProject.img }}"
-          alt="{{ selectedProject.name }} image"
+          src="{{ selectedProject?.img }}"
+          alt="{{ selectedProject?.name }} image"
         >
       </div>
     </div>
@@ -121,7 +121,7 @@
 
         <a
           target="_blank"
-          href="{{ selectedProject.urls.github }}"
+          href="{{ selectedProject?.urls.github }}"
           class="github"
         >
           <img
@@ -138,7 +138,7 @@
 
         <a
           target="_blank"
-          href="{{ selectedProject.urls.app }}"
+          href="{{ selectedProject?.urls.app }}"
           class="dive ember-btn"
         >
           Deep dive

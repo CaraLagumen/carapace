@@ -68,21 +68,36 @@
         class="about__blog--nav-item"
       >
         <div class="about__blog--nav-item-date">
-          {{ post.published | date:'short' }}
+          {{ post?.published | date:'short' }}
         </div>
         <div
           (click)="onSelectedPost(post)"
           class="about__blog--nav-item-title"
         >
-          {{ post.title }}
+          {{ post?.title }}
         </div>
       </div>
 
     </div>
 
     <div
+      *ngIf="!selectedPost"
+      @flicker
+      class="about__blog--content"
+    >
+      Hello there. Welcome to my logs, otherwise called TMI. Here,
+      you will find the reality of my programming journey, comprised of
+      sweat, tears, great success, and mostly suspense.
+      <br><br>
+      Please choose an entry to get started. Caution: rambling ahead.
+      <br><br>
+      Powered by Blogger and my brain.
+    </div>
+
+    <div
+      *ngIf="selectedPost"
       [@flicker]="selectedPost"
-      [innerHTML]="selectedPost.content"
+      [innerHTML]="selectedPost?.content"
       class="about__blog--content"
     >
       Hello there. Welcome to my logs, otherwise called TMI. Here,

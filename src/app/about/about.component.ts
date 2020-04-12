@@ -17,9 +17,9 @@ export class AboutComponent implements OnInit {
   aboutText$: Observable<string[]>;
   aboutTextFormatted$: Observable<string>;
   posts$: Observable<any[]>;
-  selectedPost: any;
   readMore: boolean = false;
   blog: boolean = false;
+  selectedPost: any;
 
   constructor(
     private firebaseService: FirebaseService,
