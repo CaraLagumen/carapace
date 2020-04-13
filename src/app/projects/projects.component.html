@@ -1,6 +1,7 @@
 <div id="projects-nav">
   <app-projects-nav
     [projects]="projects"
+    [selectedProject]="selectedProject"
     (getSelectedProject)="onSetSelectedProject($event)"
   >
   </app-projects-nav>
@@ -120,6 +121,24 @@
       <div class="projects__main--btns-access">
 
         <a
+          *ngIf="selectedProject.urls.postman"
+          target="_blank"
+          href="{{ selectedProject?.urls.postman }}"
+          class="postman"
+        >
+          <img
+            src="assets/postman.svg"
+            alt="Postman logo"
+            class="no-hover1"
+          >
+          <img
+            src="assets/postman-white.svg"
+            alt="Postman logo"
+            class="hover1"
+          >
+        </a>
+
+        <a
           target="_blank"
           href="{{ selectedProject?.urls.github }}"
           class="github"
@@ -127,12 +146,12 @@
           <img
             src="assets/github.svg"
             alt="GitHub logo"
-            class="no-hover"
+            class="no-hover2"
           >
           <img
             src="assets/github-white.svg"
             alt="GitHub logo"
-            class="hover"
+            class="hover2"
           >
         </a>
 

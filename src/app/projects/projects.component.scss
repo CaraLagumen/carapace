@@ -39,8 +39,8 @@
     height: 50vh;
     width: 75vw;
 
-    @media only screen and (max-width: 34em) {
-      //550W
+    @media only screen and (max-width: 53em) {
+      //850W
       width: 100%;
     }
 
@@ -142,8 +142,8 @@
           width: 30rem;
         }
 
-        @media only screen and (max-width: 34em) {
-          //550W
+        @media only screen and (max-width: 53em) {
+          //850W
           grid-template-columns: repeat(auto-fill, 3.5rem);
 
           height: 7rem;
@@ -166,8 +166,8 @@
             width: 3.5rem;
           }
 
-          @media only screen and (max-width: 34em) {
-            //550W
+          @media only screen and (max-width: 53em) {
+            //850W
             grid-row: auto;
           }
         }
@@ -179,8 +179,8 @@
 
           transform: scale(2) translateY(0.1rem);
 
-          @media only screen and (max-width: 34em) {
-            //550W
+          @media only screen and (max-width: 53em) {
+            //850W
             grid-column: span 2;
             grid-row: auto;
             align-self: center;
@@ -196,8 +196,8 @@
 
           transform: scale(1.4) translate(0.5rem, -0.1rem);
 
-          @media only screen and (max-width: 34em) {
-            //550W
+          @media only screen and (max-width: 53em) {
+            //850W
             grid-column: span 2;
             grid-row: auto;
             align-self: center;
@@ -221,29 +221,15 @@
           gap: 1rem;
         }
 
-        @media only screen and (max-width: 34em) {
-          //550W
+        @media only screen and (max-width: 53em) {
+          //850W
           margin-right: 3rem;
         }
 
-        .github {
+        .postman, .github {
           grid-row: 1 / -1;
           align-self: center;
           justify-self: flex-end;
-
-          .hover {
-            display: none;
-          }
-
-          &:hover {
-            .hover {
-              display: inline;
-            }
-
-            .no-hover {
-              display: none;
-            }
-          }
 
           img {
             height: 5rem;
@@ -267,6 +253,38 @@
 
             &:active {
               transform: scale(1);
+            }
+          }
+        }
+
+        .postman {
+          .hover1 {
+            display: none;
+          }
+
+          &:hover {
+            .hover1 {
+              display: inline;
+            }
+
+            .no-hover1 {
+              display: none;
+            }
+          }
+        }
+
+        .github {
+          .hover2 {
+            display: none;
+          }
+
+          &:hover {
+            .hover2 {
+              display: inline;
+            }
+
+            .no-hover2 {
+              display: none;
             }
           }
         }
@@ -296,8 +314,8 @@
             font-size: var(--font-medium);
           }
 
-          @media only screen and (max-width: 34em) {
-            //550W
+          @media only screen and (max-width: 53em) {
+            //850W
             font-size: var(--font-small);
           }
 

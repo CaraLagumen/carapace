@@ -47,8 +47,8 @@
         bottom: 35.4vh;
       }
 
-      @media only screen and (max-width: 40em) {
-        //650W
+      @media only screen and (max-width: 53em) {
+        //850W
         display: none;
       }
 
@@ -96,8 +96,8 @@
 
       background-color: var(--color-light);
 
-      @media only screen and (max-width: 40em) {
-        //650W
+      @media only screen and (max-width: 53em) {
+        //850W
         height: 2vh;
       }
     }

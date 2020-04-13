@@ -72,6 +72,9 @@
         </div>
         <div
           (click)="onSelectedPost(post)"
+          [ngStyle]="{
+            'font-weight': post?.title === selectedPost?.title ? 700 : 400
+          }"
           class="about__blog--nav-item-title"
         >
           {{ post?.title }}

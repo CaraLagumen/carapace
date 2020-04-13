@@ -11,6 +11,7 @@ import { Project } from "../project.model";
 })
 export class ProjectsNavComponent implements OnInit {
   @Input() projects: Project[];
+  @Input() selectedProject: Project;
   @Output() getSelectedProject = new EventEmitter<Project>();
 
   hide: boolean = true;

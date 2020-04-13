@@ -32,11 +32,17 @@
       class="projects-nav__main--item"
     >
 
-      <div class="projects-nav__main--item-title">
+      <div
+        *ngIf="project !== selectedProject"
+        class="projects-nav__main--item-title"
+      >
         {{ project?.name }}
       </div>
 
-      <div class="projects-nav__main--item-media">
+      <div
+        *ngIf="project !== selectedProject"
+        class="projects-nav__main--item-media"
+      >
         <img
           src="{{ project?.img }}"
           alt="{{ project?.name }} image"
