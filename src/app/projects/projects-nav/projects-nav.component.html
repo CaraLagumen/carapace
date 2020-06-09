@@ -1,19 +1,19 @@
 <div class="projects-nav">
 
-  <span
-    *ngIf="hide === true"
-    class="projects-nav__text"
-  >
-    Explore
-    <br><span>▼</span>
-  </span>
-
   <div
     *ngIf="hide === true"
     (click)="onToggleProjects()"
     class="projects-nav__btn"
   >
-    <span [@flicker]="hide">
+    <span class="projects-nav__btn--text">
+      Explore
+      <br><span>▼</span>
+    </span>
+
+    <span
+      [@flicker]="hide"
+      class="projects-nav__btn--block"
+    >
       ■■
       <br>
       ■■

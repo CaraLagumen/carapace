@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
   }
 
   onCopyAlert() {
-    this.alertService.success("Email address copied", {
+    this.alertService.success("Email address copied to clipboard", {
       autoClose: true,
       keepAfterRouteChange: true
     });
@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit {
 
   onEmailAlert() {
     this.alertService.info(
-      "Your default email client should've opened, apologies otherwise",
+      "Your default email client should've been opened",
       {
         autoClose: true,
         keepAfterRouteChange: true

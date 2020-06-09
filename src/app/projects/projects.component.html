@@ -104,6 +104,12 @@
           alt="Nodejs logo"
         >
         <img
+          *ngIf="selectedProject.stack.includes('typescript')"
+          (click)="onStackAlert('typescript')"
+          src="assets/typescript.svg"
+          alt="Typescript logo"
+        >
+        <img
           *ngIf="selectedProject.stack.includes('threejs')"
           (click)="onStackAlert('threejs')"
           src="assets/threejs.svg"

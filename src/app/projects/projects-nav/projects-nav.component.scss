@@ -9,66 +9,68 @@
     padding-top: 2rem;
   }
 
-  &__text {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    opacity: 1;
-
-    font-size: var(--font-medium);
-    font-style: italic;
-    font-weight: 300;
-    line-height: 2.6rem;
-    text-transform: lowercase;
-    text-align: center;
-
-    @media only screen and (min-height: 67em) {
-      //1080H
-      top: 10%;
-    }
-
-    @media only screen and (min-height: 90em) {
-      //1440H
-      top: 6%;
-    }
-
-    span {
-      position: relative;
-      top: -1.5rem;
-
-      font-size: 1rem;
-    }
-  }
-
   &__btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    transform-origin: 45% 55%;
-
-    padding: 1rem;
-    opacity: 0.5;
-
-    color: var(--color-accent2);
-    font-size: var(--font-medium);
-    letter-spacing: -0.5rem;
-    line-height: 1rem;
-
     cursor: pointer;
 
-    &:hover {
+    &:hover &--block {
       letter-spacing: 0.8rem;
       line-height: 2rem;
 
       animation: spin 5s infinite linear;
     }
 
-    &:active {
+    &:active &--block {
       letter-spacing: 5.8rem;
       line-height: 7rem;
+    }
+
+    &--text {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      opacity: 1;
+
+      font-size: var(--font-medium);
+      font-style: italic;
+      font-weight: 300;
+      line-height: 2.6rem;
+      text-transform: lowercase;
+      text-align: center;
+
+      @media only screen and (min-height: 67em) {
+        //1080H
+        top: 10%;
+      }
+
+      @media only screen and (min-height: 90em) {
+        //1440H
+        top: 6%;
+      }
+
+      span {
+        position: relative;
+        top: -1.5rem;
+
+        font-size: 1rem;
+      }
+    }
+
+    &--block {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      transform-origin: 45% 55%;
+
+      padding: 1rem;
+      opacity: 0.5;
+
+      color: var(--color-accent2);
+      font-size: var(--font-medium);
+      letter-spacing: -0.5rem;
+      line-height: 1rem;
     }
   }
 

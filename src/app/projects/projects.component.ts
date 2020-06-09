@@ -22,11 +22,11 @@ import { AlertService } from "../components/alert/alert.service";
 export class ProjectsComponent implements OnInit, OnDestroy {
   private firebaseSub: Subscription;
 
-  projectTitle: any;
+  projectTitle: string;
   projects: Project[];
   selectedProject: Project;
   formattedDescription: string;
-  url: any;
+  url: string;
   hide: boolean = true;
 
   constructor(
