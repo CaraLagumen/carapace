@@ -25,7 +25,7 @@ export class AppComponent implements AfterViewInit {
 
   objects: any[] = [];
   increment: number = window.pageYOffset;
-  mode: `☾` | `☀` = `☾`;
+  mode: `☾` | `☀` = `☀`;
 
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
@@ -99,10 +99,14 @@ export class AppComponent implements AfterViewInit {
   @HostListener("window:scroll")
   onPageScroll() {
     if (window.pageYOffset > this.increment) {
+      this.camera.rotation.y -= 0.0001;
+      this.camera.rotation.z -= 0.0001;
       this.camera.position.y -= 0.001;
       this.camera.position.z -= 0.01;
       this.increment += 16;
     } else if (window.pageYOffset < this.increment) {
+      this.camera.rotation.y += 0.0001;
+      this.camera.rotation.z += 0.0001;
       this.camera.position.y += 0.001;
       this.camera.position.z += 0.01;
       this.increment -= 16;
@@ -111,12 +115,26 @@ export class AppComponent implements AfterViewInit {
 
   render() {
     //ANIMATE EACH OBJECT
-    for (let i = 0; i < this.objects.length; i++) {
+    for (let i = 0; i < this.objects.length / 2; i++) {
       this.objects[i].rotation.x += Math.random() * 0.0001;
-      this.objects[i].rotation.y += Math.random() * 0.0001;
+      this.objects[i].rotation.y -= Math.random() * 0.0001;
       this.objects[i].rotation.z += Math.random() * 0.0001;
-      this.objects[i].position.x += (Math.random() - 0.5) * 0.0000000000000001;
+      this.objects[i].position.x -= (Math.random() - 0.5) * 0.0000000000000001;
       this.objects[i].position.z += (Math.random() - 0.5) * 0.0000000000000001;
+
+      if (this.objects[i].position.x < 0.5) {
+        this.objects[i].position.y += (Math.random() - 0.5) * 0.001;
+      } else {
+        this.objects[i].position.y -= (Math.random() - 0.5) * 0.001;
+      }
+    }
+
+    for (let i = this.objects.length / 2; i < this.objects.length; i++) {
+      this.objects[i].rotation.x -= Math.random() * 0.0001;
+      this.objects[i].rotation.y += Math.random() * 0.0001;
+      this.objects[i].rotation.z -= Math.random() * 0.0001;
+      this.objects[i].position.x += (Math.random() - 0.5) * 0.0000000000000001;
+      this.objects[i].position.z -= (Math.random() - 0.5) * 0.0000000000000001;
 
       if (this.objects[i].position.x < 0.5) {
         this.objects[i].position.y += (Math.random() - 0.5) * 0.001;

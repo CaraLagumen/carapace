@@ -87,7 +87,8 @@
     }
 
     img {
-      height: 3.8rem;
+      height: 4rem;
+      transform: scale(0.9);
 
       vertical-align: middle;
 
@@ -100,14 +101,14 @@
       }
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1);
 
         filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
           drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
       }
 
       &:active {
-        transform: scale(1.04);
+        transform: scale(0.9);
       }
     }
   }
@@ -117,6 +118,8 @@
     justify-self: center;
     justify-items: center;
     z-index: 5100;
+
+    margin-right: -4rem;
 
     @media only screen and (max-width: 34em) {
       //550W
@@ -147,6 +150,7 @@
         img {
           height: 3.3rem;
           width: 3.3rem;
+          transform: scale(0.8);
 
           vertical-align: middle;
 
@@ -160,14 +164,14 @@
           }
 
           &:hover {
-            transform: scale(1.05);
+            transform: scale(1);
 
             filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
               drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
           }
 
           &:active {
-            transform: scale(1);
+            transform: scale(0.8);
           }
         }
 
@@ -242,6 +246,7 @@
       height: 2.5rem;
       width: 2.5rem;
       margin-left: 0.5rem;
+      transform: scale(0.8);
 
       vertical-align: middle;
 
@@ -255,14 +260,14 @@
       }
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1);
 
         filter: drop-shadow(0 0.4rem 0.1rem rgba(black, 0.4))
           drop-shadow(0 0.1rem 0.5rem rgba(black, 0.4));
       }
 
       &:active {
-        transform: scale(1);
+        transform: scale(0.8);
       }
     }
   }
@@ -394,14 +399,15 @@
 
   &-codewars {
     img {
-      transform: scale(1.4);
+      width: 55%;
+      transform: scale(0.95);
 
       &:hover {
-        transform: scale(1.47) !important;
+        transform: scale(1) !important;
       }
 
       &:active {
-        transform: scale(1.4) !important;
+        transform: scale(0.95) !important;
       }
     }
 
