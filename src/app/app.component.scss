@@ -8,7 +8,7 @@ app-header {
   width: 100%;
   border-bottom: solid 0.1rem var(--color-light-grey);
 
-  background-color: var(--color-dark);
+  background-color: #222325; //OVERRIDES MODE
   box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.09),
     0 0.4rem 0.2rem rgba(0, 0, 0, 0.09), 0 0.8rem 0.4rem rgba(0, 0, 0, 0.09),
     0 1.6rem 0.8rem rgba(0, 0, 0, 0.09), 0 3.2rem 1.6rem rgba(0, 0, 0, 0.09);
@@ -85,4 +85,32 @@ app-nav {
 
 .scrollable {
   scroll-snap-align: start;
+}
+
+#mode {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0.8;
+
+  border: none;
+  padding: 2rem;
+  background: none;
+
+  color: var(--color-light);
+  font-family: var(--font-heading);
+  font-size: var(--font-medium);
+  text-transform: uppercase;
+  text-shadow: 0 0 0.2rem rgba(black, 1);
+
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-accent1);
+  }
+
+  &:active {
+    transform: translateY(0.1rem);
+  }
 }

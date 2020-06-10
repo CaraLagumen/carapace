@@ -6,6 +6,18 @@
   width: 100%;
   padding: 2rem;
 
+  @media only screen and (max-width: 60em) {
+    //950W
+
+    margin-right: -2rem;
+    margin-bottom: -2rem;
+    transform: scale(0.75);
+
+    &:hover {
+      transform: scale(1);
+    }
+  }
+
   &__main {
     display: grid;
     justify-items: flex-end;
@@ -47,8 +59,8 @@
         bottom: 35.4vh;
       }
 
-      @media only screen and (max-width: 53em) {
-        //850W
+      @media only screen and (max-width: 60em) {
+        //950W
         display: none;
       }
 
@@ -78,12 +90,17 @@
       font-size: var(--font-medium);
       font-weight: 500;
       text-transform: uppercase;
+      text-shadow: 0 0 0.4rem rgba(black, 0.8);
 
       cursor: pointer;
 
       &:hover {
         opacity: 1;
         transform: scale(1.2);
+      }
+
+      &:active {
+        transform: translateY(0.1rem);
       }
     }
 
@@ -96,8 +113,8 @@
 
       background-color: var(--color-light);
 
-      @media only screen and (max-width: 53em) {
-        //850W
+      @media only screen and (max-width: 60em) {
+        //950W
         height: 2vh;
       }
     }

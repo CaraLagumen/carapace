@@ -84,6 +84,10 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     );
   }
 
+  onRedirect() {
+    window.open(`${this.selectedProject.urls.app}`, "_blank");
+  }
+
   ngOnDestroy() {
     this.firebaseSub.unsubscribe();
   }

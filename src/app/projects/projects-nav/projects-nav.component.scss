@@ -3,9 +3,9 @@
   width: 75vw;
   padding: 1rem;
 
-  @media only screen and (max-width: 34em) {
-    //550W
-    margin-left: -8rem;
+  @media only screen and (max-width: 60em) {
+    //950W
+    margin-left: -12rem;
     padding-top: 2rem;
   }
 
@@ -150,10 +150,10 @@
 
       cursor: pointer;
 
-      @media only screen and (max-width: 34em) {
-        //550W
+      @media only screen and (max-width: 60em) {
+        //950W
         padding-top: 1rem;
-        margin-left: -8rem;
+        margin-left: -12rem;
       }
 
       &:hover {

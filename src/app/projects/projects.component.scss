@@ -39,8 +39,9 @@
     height: 50vh;
     width: 75vw;
 
-    @media only screen and (max-width: 53em) {
-      //850W
+    @media only screen and (max-width: 60em) {
+      //950W
+      transform: translateY(-2rem);
       width: 100%;
     }
 
@@ -80,6 +81,11 @@
 
         overflow: hidden;
 
+        @media only screen and (max-width: 60em) {
+          //950W
+          width: 100%;
+        }
+
         span {
           position: absolute;
           top: 50%;
@@ -88,7 +94,7 @@
           padding: 2rem 3rem;
 
           transform: translateY(-50%);
-          
+
           cursor: text;
         }
       }
@@ -144,12 +150,12 @@
           width: 30rem;
         }
 
-        @media only screen and (max-width: 53em) {
-          //850W
+        @media only screen and (max-width: 60em) {
+          //950W
           grid-template-columns: repeat(auto-fill, 3.5rem);
 
           height: 7rem;
-          margin-left: 3rem;
+          margin-left: 2rem;
         }
 
         img {
@@ -168,9 +174,13 @@
             width: 3.5rem;
           }
 
-          @media only screen and (max-width: 53em) {
-            //850W
+          @media only screen and (max-width: 60em) {
+            //950W
             grid-row: auto;
+          }
+
+          &:active {
+            margin-bottom: -0.1rem;
           }
         }
 
@@ -181,8 +191,8 @@
 
           transform: scale(2) translateY(0.1rem);
 
-          @media only screen and (max-width: 53em) {
-            //850W
+          @media only screen and (max-width: 60em) {
+            //950W
             grid-column: span 2;
             grid-row: auto;
             align-self: center;
@@ -198,8 +208,8 @@
 
           transform: scale(1.4) translate(0.5rem, -0.1rem);
 
-          @media only screen and (max-width: 53em) {
-            //850W
+          @media only screen and (max-width: 60em) {
+            //950W
             grid-column: span 2;
             grid-row: auto;
             align-self: center;
@@ -223,12 +233,13 @@
           gap: 1rem;
         }
 
-        @media only screen and (max-width: 53em) {
-          //850W
-          margin-right: 3rem;
+        @media only screen and (max-width: 60em) {
+          //950W
+          margin-right: 2rem;
         }
 
-        .postman, .github {
+        .postman,
+        .github {
           grid-row: 1 / -1;
           align-self: center;
           justify-self: flex-end;
@@ -316,8 +327,8 @@
             font-size: var(--font-medium);
           }
 
-          @media only screen and (max-width: 53em) {
-            //850W
+          @media only screen and (max-width: 60em) {
+            //950W
             font-size: var(--font-small);
           }
 

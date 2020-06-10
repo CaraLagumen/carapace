@@ -3,14 +3,14 @@ import {
   ViewChild,
   ElementRef,
   AfterViewInit,
-  HostListener
+  HostListener,
 } from "@angular/core";
 import * as THREE from "three";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild("rendererContainer", { static: false })
@@ -22,12 +22,16 @@ export class AppComponent implements AfterViewInit {
   geometry: any;
   material: any;
   object: any;
+
   objects: any[] = [];
   increment: number = window.pageYOffset;
+  mode: `☾` | `☀` = `☾`;
 
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
-  constructor() {
+  constructor(private elementRef: ElementRef) {
+    //START THREEJS----------------------------------------------------------
+
     //SCENE & CAMERA
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(
@@ -58,7 +62,7 @@ export class AppComponent implements AfterViewInit {
     this.material = new THREE.MeshPhysicalMaterial({
       color: 0x34c96a,
       opacity: 0.5,
-      transparent: true
+      transparent: true,
     });
 
     //SET INITIAL OBJECT POSITIONS
@@ -124,5 +128,23 @@ export class AppComponent implements AfterViewInit {
     //RENDER
     this.renderer.render(this.scene, this.camera);
     window.requestAnimationFrame(this.render.bind(this));
+  }
+
+  onToggleMode() {
+    if (this.mode === `☾`) {
+      this.mode = `☀`;
+
+      this.elementRef.nativeElement.style.setProperty(
+        "--color-dark",
+        "#222325"
+      );
+    } else if (this.mode === `☀`) {
+      this.mode = `☾`;
+
+      this.elementRef.nativeElement.style.setProperty(
+        "--color-dark",
+        "#f2f2f2"
+      );
+    }
   }
 }

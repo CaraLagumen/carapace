@@ -18,11 +18,15 @@
     <div
       (mouseenter)="onToggleDescription()"
       (mouseleave)="onToggleDescription()"
+      target="_blank"
+      (click)="onRedirect()"
       class="projects__main--view"
     >
       <div
         @slideIn
         *ngIf="!hide"
+        target="_blank"
+        (click)="onRedirect()"
         class="projects__main--view-description"
       >
         <span [innerHTML]="formattedDescription"></span>

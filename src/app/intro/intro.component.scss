@@ -27,13 +27,12 @@
     @media only screen and (max-width: 78em) {
       //1250W
       width: 75%;
-      word-break: break-all;
+      overflow-x: auto;
     }
 
     @media only screen and (max-width: 34em) {
       //550W
       width: 100%;
-      word-break: break-all;
     }
   }
 }

@@ -14,7 +14,7 @@ export class ProjectsNavComponent implements OnInit {
   @Input() selectedProject: Project;
   @Output() getSelectedProject = new EventEmitter<Project>();
 
-  hide: boolean = true;
+  hide: boolean = false;
 
   constructor() {}
 
