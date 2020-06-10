@@ -169,10 +169,14 @@
           @media only screen and (max-width: 60em) {
             //950W
             grid-row: auto;
+
+            &:active {
+              margin-bottom: -0.1rem;
+            }
           }
 
           &:active {
-            margin-bottom: -0.1rem;
+            margin-bottom: -0.2rem;
           }
         }
 

@@ -118,7 +118,8 @@
         }
 
         &:hover {
-          .hover {
+          .hover,
+          span {
             display: inline;
           }
 
@@ -144,6 +145,31 @@
 
           &:active {
             transform: scale(0.8);
+          }
+        }
+
+        span {
+          display: none;
+          position: absolute;
+          top: 35%;
+          left: 87%;
+          opacity: 0.5;
+
+          padding: 0 0.5rem;
+          padding-bottom: 0.1rem;
+          transform: skewX(10deg);
+
+          color: white;
+          font-family: var(--font-primary);
+          font-size: var(--font-xsmall);
+          font-weight: 700;
+          text-align: center;
+
+          pointer-events: none;
+
+          @media only screen and (max-width: 34em) {
+            //550W
+            left: 83%;
           }
         }
       }
