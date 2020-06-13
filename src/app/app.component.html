@@ -12,20 +12,28 @@
   <div class="app__main">
 
     <app-intro
+      #introContainer
       id="page-intro"
       class="scrollable"
+      [ngClass]="{ 'display': displayIntro, 'hide': !displayIntro }"
     ></app-intro>
     <app-about
+      #aboutContainer
       id="page-about"
       class="scrollable"
+      [ngClass]="{ 'display': displayAbout, 'hide': !displayAbout }"
     ></app-about>
     <app-projects
+      #projectsContainer
       id="page-projects"
       class="scrollable"
+      [ngClass]="{ 'display': displayProjects, 'hide': !displayProjects }"
     ></app-projects>
     <app-contact
+      #contactContainer
       id="page-contact"
       class="scrollable"
+      [ngClass]="{ 'display': displayContact, 'hide': !displayContact }"
     ></app-contact>
 
     <div

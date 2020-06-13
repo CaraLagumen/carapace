@@ -7,6 +7,8 @@ import {
 } from "@angular/core";
 import * as THREE from "three";
 
+import { flicker } from "./shared/animations";
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -15,6 +17,10 @@ import * as THREE from "three";
 export class AppComponent implements AfterViewInit {
   @ViewChild("rendererContainer", { static: false })
   rendererContainer: ElementRef;
+  introContainer: ElementRef;
+  aboutContainer: ElementRef;
+  projectsContainer: ElementRef;
+  contactContainer: ElementRef;
   scene: any;
   camera: any;
   light: any;
@@ -22,6 +28,10 @@ export class AppComponent implements AfterViewInit {
   geometry: any;
   material: any;
   object: any;
+  displayIntro = true;
+  displayAbout = true;
+  displayProjects = true;
+  displayContact = true;
 
   objects: any[] = [];
   increment: number = window.pageYOffset;
@@ -95,9 +105,9 @@ export class AppComponent implements AfterViewInit {
     this.camera.updateProjectionMatrix();
   }
 
-  //LISTEN TO WINDOW FOR SCROLL POSITION TO ALTER CAMERA
   @HostListener("window:scroll")
   onPageScroll() {
+    //LISTEN TO WINDOW FOR SCROLL POSITION TO ALTER CAMERA
     if (window.pageYOffset > this.increment) {
       this.camera.rotation.y -= 0.0001;
       this.camera.rotation.z -= 0.0001;
@@ -110,6 +120,17 @@ export class AppComponent implements AfterViewInit {
       this.camera.position.y += 0.001;
       this.camera.position.z += 0.01;
       this.increment -= 16;
+    }
+
+    //ANIMATE PAGES ON SCROLL (NOT A PART OF THREE.JS)
+    if (window.pageYOffset < window.innerHeight * 0.5) {
+      this.getDisplay(`intro`);
+    } else if (window.pageYOffset < window.innerHeight * 1.5) {
+      this.getDisplay(`about`);
+    } else if (window.pageYOffset < window.innerHeight * 2.5) {
+      this.getDisplay(`projects`);
+    } else if (window.pageYOffset < window.innerHeight * 3.5) {
+      this.getDisplay(`contact`);
     }
   }
 
@@ -163,6 +184,36 @@ export class AppComponent implements AfterViewInit {
         "--color-dark",
         "#f2f2f2"
       );
+    }
+  }
+
+  //(NOT A PART OF THREE.JS)
+  getDisplay(page: `intro` | `about` | `projects` | `contact`) {
+    switch (page) {
+      case `intro`:
+        this.displayIntro = true;
+        this.displayAbout = false;
+        this.displayProjects = false;
+        this.displayContact = false;
+        return;
+      case `about`:
+        this.displayIntro = false;
+        this.displayAbout = true;
+        this.displayProjects = false;
+        this.displayContact = false;
+        return;
+      case `projects`:
+        this.displayIntro = false;
+        this.displayAbout = false;
+        this.displayProjects = true;
+        this.displayContact = false;
+        return;
+      case `contact`:
+        this.displayIntro = false;
+        this.displayAbout = false;
+        this.displayProjects = false;
+        this.displayContact = true;
+        return;
     }
   }
 }
