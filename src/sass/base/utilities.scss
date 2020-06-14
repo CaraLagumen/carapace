@@ -52,3 +52,23 @@
     0 0.35rem 0.35rem rgba(black, 0.1), 0 0.45rem 0.45rem rgba(black, 0.75),
     0 0.65rem 0.65rem rgba(black, 0.5), 0 1.1rem 1.1rem rgba(black, 0.025);
 }
+
+.overlay {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0.4;
+    background-image: linear-gradient(
+      120deg,
+      var(--color-accent2),
+      var(--color-accent3)
+    );
+    mix-blend-mode: soft-light;
+  }
+}
