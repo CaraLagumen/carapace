@@ -28,18 +28,22 @@ export class AppComponent implements AfterViewInit {
   geometry: any;
   material: any;
   object: any;
-  displayIntro = true;
-  displayAbout = true;
-  displayProjects = true;
-  displayContact = true;
 
   objects: any[] = [];
   increment: number = window.pageYOffset;
   mode: `☾` | `☀` = `☀`;
+  displayIntro = true;
+  displayAbout = true;
+  displayProjects = true;
+  displayContact = true;
+  browserSupported = false;
+  browser = navigator.userAgent.toLowerCase().indexOf(`firefox`);
 
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
   constructor(private elementRef: ElementRef) {
+    if (this.browser > -1) this.browserSupported = true;
+
     //START THREEJS----------------------------------------------------------
 
     //SCENE & CAMERA

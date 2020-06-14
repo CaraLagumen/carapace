@@ -21,6 +21,8 @@
       ></app-intro>
     </div>
 
+    <div [ngClass]="{ 'stopper': !browserSupported}"></div>
+
     <div
       id="page-about"
       class="scrollable"
@@ -31,6 +33,8 @@
       ></app-about>
     </div>
 
+    <div [ngClass]="{ 'stopper': !browserSupported}"></div>
+
     <div
       id="page-projects"
       class="scrollable"
@@ -40,6 +44,8 @@
         [ngClass]="{ 'display': displayProjects, 'hide': !displayProjects }"
       ></app-projects>
     </div>
+
+    <div [ngClass]="{ 'stopper': !browserSupported}"></div>
 
     <div
       id="page-contact"
