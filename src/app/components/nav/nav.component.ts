@@ -27,7 +27,8 @@ export class NavComponent implements OnInit {
       this.page = "/#page-contact";
     }
 
-    this.scrollY = window.pageYOffset / 10.5; //CONTROL WITH .diamond
+    //DIAMOND PLACEMENT - CONTROL WITH .diamond
+    this.scrollY = window.pageYOffset / 10.5;
   }
 
   get diamondPosition() {

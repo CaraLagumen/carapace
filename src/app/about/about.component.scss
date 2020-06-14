@@ -207,6 +207,7 @@
       text-transform: none;
 
       overflow-y: auto;
+      overscroll-behavior: contain;
 
       @media only screen and (max-width: 60em) {
         //950W

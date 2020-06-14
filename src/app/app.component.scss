@@ -83,10 +83,6 @@ app-nav {
   }
 }
 
-.scrollable {
-  scroll-snap-align: start;
-}
-
 #mode {
   position: fixed;
   bottom: 0;
@@ -113,6 +109,10 @@ app-nav {
   &:active {
     transform: translateY(0.1rem);
   }
+}
+
+.scrollable {
+  scroll-snap-align: start;
 }
 
 .display {
