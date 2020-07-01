@@ -52,7 +52,7 @@ export class AppComponent implements AfterViewInit {
       70,
       window.innerWidth / window.innerHeight
     );
-    this.camera.position.z = 4;
+    this.camera.position.z = 3.5;
     this.camera.rotation.z = 3;
     this.scene.add(this.camera);
 
@@ -113,14 +113,14 @@ export class AppComponent implements AfterViewInit {
   onPageScroll() {
     //LISTEN TO WINDOW FOR SCROLL POSITION TO ALTER CAMERA
     if (window.pageYOffset > this.increment) {
-      this.camera.rotation.y -= 0.0001;
-      this.camera.rotation.z -= 0.0001;
+      this.camera.rotation.y -= 0.001;
+      this.camera.rotation.z -= 0.001;
       this.camera.position.y -= 0.001;
       this.camera.position.z -= 0.01;
       this.increment += 16;
     } else if (window.pageYOffset < this.increment) {
-      this.camera.rotation.y += 0.0001;
-      this.camera.rotation.z += 0.0001;
+      this.camera.rotation.y += 0.001;
+      this.camera.rotation.z += 0.001;
       this.camera.position.y += 0.001;
       this.camera.position.z += 0.01;
       this.increment -= 16;
